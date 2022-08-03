@@ -1,0 +1,323 @@
+@import '../../../../src/assets/styles/mixins';
+
+.check_block {
+  padding: 23px 32px 32px;
+  margin-bottom: 47px;
+  @include mq(sm-down) {
+    padding: 20px 20px 32px;
+    margin-bottom: 36px;
+  }
+  .title_block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    @include mq(sm-down) {
+      margin-bottom: 24px;
+    }
+    >span{
+      font-weight: 600;
+      font-size: 20px;
+      @include mq(sm-down) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    >div{
+      @include mq(sm-down) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+      >div{
+        position: relative;
+        background: var(--white);
+        width: 178px;
+        height: 46px;
+        z-index: 9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        margin-left: 1px;
+        cursor: pointer;
+        &:hover{
+          .tooltip{
+            display: flex;
+          }
+        }
+        @include mq(sm-down) {
+          width: 144px;
+          height: 36px;
+        }
+        >span{
+          font-weight: bold;
+          font-size: 16px;
+          color: var(--info);
+          @include mq(sm-down) {
+            font-size: 12px;
+            line-height: 20px;
+          }
+        }
+        >p{
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: var(--secondary_light);
+          padding-left: 8px;
+          margin-left: 8px;
+          border-left: 1px solid var(--third_light);
+          @include mq(sm-down) {
+            font-size: 12px;
+            line-height: 20px;
+          }
+        }
+        .tooltip{
+          display: none;
+          position: absolute;
+          flex-direction: column;
+          bottom: -113px;
+          left: -163px;
+          width: 342px;
+          box-sizing: border-box;
+          background: #FFFFFF;
+          box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.05), 0px 6px 16px rgba(48, 49, 51, 0.18);
+          border-radius: 4px;
+          padding: 20px;
+          >span{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--secondary_light);
+            margin-bottom: 4px;
+            display: flex;
+          }
+          >p{
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--secondary);
+          }
+        }
+      }
+      .one{
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        @include mq(sm-down) {
+          font-size: 12px;
+          line-height: 16px;
+        }
+        >svg{
+          margin-right: 5px;
+        }
+      }
+      >span{
+        margin-bottom: -47px;
+        display: flex;
+        border-radius: 6px;
+        width: 180px;
+        height: 48px;
+        background: linear-gradient(265.65deg, #3964FD -3.57%, #3579FC -3.56%, rgba(253, 68, 57, 0.4) 106.12%);
+        @include mq(sm-down) {
+          width: 146px;
+          height: 38px;
+          margin-bottom: -37px;
+        }
+      }
+    }
+  }
+  Form{
+    display: flex;
+    flex-direction: column;
+    .block{
+      margin-bottom: 32px;
+      position: relative;
+      >p{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--secondary_light);
+        display: flex;
+        margin-bottom: 8px;
+      }
+      >span{
+        font-weight: 500;
+        font-size: 12px;
+        margin-top: 12px;
+        display: flex;
+        color: var(--secondary_light);
+        @include mq(sm-down) {
+          margin-top: 8px;
+          position: absolute;
+          left: 0;
+          top: 70px;
+        }
+      }
+      >div{
+        display: flex;
+        align-items: flex-end;
+        @include mq(sm-down) {
+          flex-wrap: wrap;
+        }
+      }
+      .input_wrapper{
+        width: 100%;
+        .MuiOutlinedInput-input{
+          padding: 13.5px 14px;
+        }
+        .MuiInputBase-root {
+          .MuiInputAdornment-root{
+            height: 0.01em;
+            margin-right: 8px
+          }
+        }
+      }
+      .select-component{
+        width: 180px;
+        margin-left: 16px;
+        @include mq(sm-down) {
+          width: 100%;
+          margin: 48px 0 8px 0;
+        }
+        .select__control{
+          height: 48px;
+        }
+        .select__value-container{
+          height: 48px;
+        }
+      }
+
+    }
+    .button-mui{
+      width: 134px;
+      @include mq(sm-down) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.check_error{
+  display: flex;
+  flex-direction: column;
+  h2{
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    @include mq(sm-down) {
+      margin-bottom: 24px;
+    }
+  }
+  p{
+    color: var(--secondary_light);
+    font-size: 14px;
+    line-height: 18px;
+    >span{
+      font-weight: 500;
+      color: var(--secondary);
+    }
+  }
+  .img{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    @include mq(sm-down) {
+      margin:32px 0 40px 0;
+    }
+  }
+  .btn{
+    display: flex;
+    justify-content: flex-end;
+    .button-mui--contained{
+      width: 153px;
+      min-width: 153px;
+      margin-left: 20px;
+      padding: 0;
+      @include mq(sm-down) {
+        width: calc(50% - 8px);
+        min-width: calc(50% - 8px);
+        margin-left: 16px;
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+    .button-mui--outlined{
+      width: 102px;
+      min-width: 102px;
+      padding: 0;
+      @include mq(sm-down) {
+        font-size: 14px;
+        line-height: 14px;
+        width: calc(50% - 8px);
+        min-width: calc(50% - 8px);
+      }
+    }
+  }
+}
+
+.check_address{
+  display: flex;
+  flex-direction: column;
+  h2{
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    @include mq(sm-down) {
+      margin-bottom: 24px;
+    }
+  }
+  p{
+    color: var(--secondary_light);
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 40px;
+    >span{
+      font-weight: 500;
+      color: var(--secondary);
+    }
+  }
+  .img{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    @include mq(sm-down) {
+      margin:32px 0 40px 0;
+    }
+  }
+  .btn{
+    display: flex;
+    justify-content: flex-end;
+    .button-mui--contained{
+      width: 153px;
+      min-width: 153px;
+      margin-left: 20px;
+      padding: 0;
+      @include mq(sm-down) {
+        width: calc(50% - 8px);
+        min-width: calc(50% - 8px);
+        margin-left: 16px;
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+    .button-mui--outlined{
+      width: 102px;
+      min-width: 102px;
+      padding: 0;
+      @include mq(sm-down) {
+        font-size: 14px;
+        line-height: 14px;
+        width: calc(50% - 8px);
+        min-width: calc(50% - 8px);
+      }
+    }
+  }
+}
+
+
+

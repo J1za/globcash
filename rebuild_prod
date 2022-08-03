@@ -1,0 +1,5 @@
+#run "bash -i rebuild_prod" in root project folder
+git pull;
+nvm use 14.17.0;
+npm i;
+time npm run rebuild:prod;

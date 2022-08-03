@@ -1,0 +1,87 @@
+@import "../../../../../../src/assets/styles/mixins";
+
+.link_block_reports{
+  padding: 24px 60px 45px;
+  @include mq(xl-down) {
+    padding: 24px 16px 32px;
+  }
+  @include mq(sm-down) {
+    padding: 24px 0;
+  }
+  .block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 64px 0px 32px;
+    height: 92px;
+    position: relative;
+    box-sizing: border-box;
+    @include mq(xl-down) {
+      padding: 0 32px;
+    }
+    @include mq(sm-down) {
+      padding: 24px 0;
+      height: auto;
+      flex-direction: column;
+    }
+    >div{
+      display: flex;
+      align-items: center;
+      @include mq(sm-down) {
+        flex-direction: column;
+      }
+      >div{
+        display: flex;
+        margin-left: 16px;
+        flex-direction: column;
+        @include mq(sm-down) {
+          align-items: center;
+          margin-bottom: 24px;
+        }
+        span{
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 24px;
+          color: var(--primary);
+        }
+        p{
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+          color: var(--secondary_light);
+        }
+      }
+    }
+    >img{
+      position: absolute;
+      left: 35%;
+      top: 0;
+      z-index: 0;
+      @include mq(xl-down) {
+        display: none;
+      }
+    }
+    .link{
+      z-index: 9;
+      border: 1px solid var(--info);
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 190px;
+      color: var(--info);
+      @include mq(xl-down) {
+        margin: 0;
+      }
+    }
+
+  }
+
+
+
+}

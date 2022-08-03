@@ -1,0 +1,18 @@
+// You need to change the path and import the functions into rootSaga.js
+import {takeEvery} from 'redux-saga/effects';
+import {disableLoader, enableLoader, openErrorSnack, openSuccessSnack, disableButtonLoader, enableButtonLoader} from '../../app/rootSaga';
+
+export function* handle{{pascalCase name}}Snacks() {
+  yield takeEvery('TYPE_SUCCESS', openSuccessSnack);
+  yield takeEvery('TYPE_FAIL', openErrorSnack);
+}
+
+export function* handle{{pascalCase name}}Loaders() {
+  yield takeEvery('TYPE', enableButtonLoader);
+  yield takeEvery('TYPE_SUCCESS', disableButtonLoader);
+  yield takeEvery('TYPE_FAIL', disableButtonLoader);
+
+  yield takeEvery('TYPE', enableLoader);
+  yield takeEvery('TYPE_SUCCESS', disableLoader);
+  yield takeEvery('TYPE_FAIL', disableLoader);
+}

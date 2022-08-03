@@ -1,0 +1,252 @@
+@import '../../../../../src/assets/styles/mixins';
+
+.dialog_verification {
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--dark_second);
+    margin-bottom: 16px;
+    display: flex;
+    @include mq(sm-down) {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 10px;
+    }
+  }
+  .descriptions {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--secondary_light);
+    margin-bottom: 24px;
+    display: flex;
+    @include mq(sm-down) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    @include mq(sm-down) {
+      margin-bottom: 24px;
+    }
+    span {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      color: var(--secondary_light);
+      display: flex;
+      margin-bottom: 8px;
+    }
+    p {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      color: var(--secondary_light);
+      margin-top: 4px;
+      display: flex;
+    }
+    .input-mui {
+      input {
+        height: 48px;
+        padding: 0 16px;
+        box-sizing: border-box;
+        font-size: 14px;
+        line-height: 16px;
+      }
+      fieldset {
+        top: 0;
+        legend {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .download_title {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #141d33;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    @include mq(sm-down) {
+      margin: 12px 0 20px;
+    }
+    span {
+      opacity: 0.7;
+      display: flex;
+      margin-left: 3px;
+    }
+  }
+
+  .download_wrapper_file {
+    .text {
+      display: flex;
+      flex-direction: column;
+      > span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: var(--secondary);
+      }
+      > p {
+        max-width: 250px;
+        display: flex;
+        margin-top: 4px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        color: var(--secondary_light);
+      }
+    }
+    .inactive {
+      box-sizing: border-box;
+      border: 1px dashed rgba(171, 171, 171, 0.7);
+      border-radius: 6px;
+      padding: 20px 16px;
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      justify-content: space-between;
+      @include mq(sm-down) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px;
+      }
+      .btn_controller {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        margin-top: 12px;
+        > label {
+          cursor: pointer;
+          position: relative;
+          align-items: center;
+          display: flex;
+          > input {
+            width: 65px;
+            height: 16px;
+            opacity: 0;
+            z-index: 5;
+            display: none;
+            cursor: pointer;
+          }
+          > span {
+            cursor: pointer;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            width: 65px;
+            height: 16px;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 16px;
+            color: var(--info);
+          }
+        }
+      }
+    }
+    .active {
+      padding: 20px 16px;
+      background: rgb(248, 250, 253);
+      border: 1px solid rgba(53, 121, 252, 0.4);
+      box-sizing: border-box;
+      border-radius: 6px;
+      display: flex;
+      margin-bottom: 16px;
+      align-items: center;
+      justify-content: space-between;
+      @include mq(sm-down) {
+        flex-direction: column;
+        padding: 16px 16px 12px;
+        align-items: flex-start;
+      }
+      .active_btn {
+        display: flex;
+        align-items: center;
+        @include mq(sm-down) {
+          margin-top: 8px;
+        }
+        > button {
+          display: flex;
+          align-items: center;
+        }
+        > span {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      .btn_controller {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        margin: 0 16px;
+
+        > div {
+          cursor: pointer;
+          position: relative;
+          align-items: center;
+          display: flex;
+          > input {
+            width: 24px;
+            height: 24px;
+            opacity: 0;
+            z-index: 5;
+            cursor: pointer;
+          }
+          > span {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 16px;
+            color: var(--info);
+          }
+        }
+      }
+    }
+  }
+
+  .verify {
+    margin-top: 16px;
+    @include mq(sm-down) {
+      margin-top: 8px;
+    }
+  }
+  .wrapper_edit {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include mq(sm-down) {
+      margin-top: 8px;
+    }
+    .button-mui {
+      @include mq(sm-down) {
+        min-width: calc(50% - 8px);
+      }
+      &--contained-secondary {
+        min-width: 115px;
+        margin-right: 20px;
+        @include mq(sm-down) {
+          margin-right: 18px;
+          min-width: calc(50% - 8px);
+        }
+      }
+    }
+  }
+}

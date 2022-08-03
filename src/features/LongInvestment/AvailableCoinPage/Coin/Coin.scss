@@ -1,0 +1,507 @@
+@import '../../../../../src/assets/styles/mixins';
+
+.coin_block_info {
+  background: var(--white);
+  border-bottom: 1px solid #d7e4fe;
+  padding: 0 60px;
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  @include mq(xl-down) {
+    flex-direction: column;
+    padding: 0;
+    background: transparent;
+    border: none;
+  }
+  @include mq(sm-down) {
+    border-bottom: none;
+  }
+  .chart {
+    width: 100%;
+    padding: 40px 32px 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 610px;
+    @include mq(xl-down) {
+      padding: 32px 60px;
+      background: var(--white);
+      margin-bottom: 24px;
+    }
+    @include mq(sm-down) {
+      padding: 24px 20px 20px;
+    }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      @include mq(sm-down) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .left {
+        display: flex;
+        align-items: center;
+        @include mq(sm-down) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        > span {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 24px;
+          color: var(--primary);
+          @include mq(sm-down) {
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 16px;
+          }
+        }
+        > div {
+          margin-left: 13px;
+          border: 1px solid rgba(53, 121, 252, 0.28);
+          box-sizing: border-box;
+          border-radius: 16px;
+          padding: 3px 4px;
+          @include mq(sm-down) {
+            margin: 0 0 16px 0;
+          }
+          button {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            padding: 3px 10px;
+            border-radius: 16px;
+
+            color: var(--secondary_light);
+          }
+          .active {
+            background: var(--info);
+            color: var(--white);
+          }
+        }
+      }
+      .right {
+        background: rgba(66, 121, 227, 0.08);
+        border: 1px solid rgba(226, 226, 226, 0.5);
+        box-sizing: border-box;
+        border-radius: 6px;
+        padding: 9px 0;
+        button {
+          margin: 0 12px;
+          color: rgba(17, 24, 39, 0.5);
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 14px;
+        }
+        .active {
+          font-weight: bold;
+          color: #4279e3;
+        }
+      }
+    }
+    .wrapper {
+      width: 100%;
+      margin-bottom: 24px;
+      @include mq(sm-down) {
+        overflow: auto;
+        &::-webkit-scrollbar {
+          width: 4px;
+          height: 4px;
+        }
+        &::-webkit-scrollbar-track {
+          -webkit-border-radius: 2px;
+          background: #e3e6eb;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: #3579fc;
+          border-radius: 2px;
+        }
+        &::-webkit-scrollbar-thumb:window-inactive {
+          background: #3579fc;
+          border-radius: 2px;
+        }
+      }
+      div {
+        @include mq(sm-down) {
+          min-width: 800px;
+        }
+      }
+      .chart_cap{
+            display: flex;
+            justify-content: center;
+      }
+    }
+    .bottom {
+      display: flex;
+      margin-top: 24px;
+      > div {
+        display: flex;
+        align-items: center;
+        margin-right: 24px;
+        > span {
+          font-weight: 600;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          line-height: 20px;
+          text-transform: uppercase;
+          color: var(--secondary);
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+  .buy_coin {
+    width: 505px;
+    min-width: 505px;
+    padding: 40px 0 40px 32px;
+    @include mq(xl-down) {
+      padding: 32px 60px;
+      background: var(--white);
+      margin-bottom: 24px;
+      width: 100%;
+      min-width: 100%;
+    }
+    @include mq(sm-down) {
+      padding: 24px;
+    }
+  }
+
+  .buy_coin {
+    .title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+      color: var(--dark_second);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 12px;
+      }
+      > div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        cursor: pointer;
+        svg {
+          margin: 0;
+        }
+        &:hover {
+          > span {
+            display: flex;
+          }
+        }
+        > span {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 13px;
+          line-height: 22px;
+          color: var(--secondary);
+          display: none;
+          position: absolute;
+          right: 0;
+          box-sizing: border-box;
+          width: 300px;
+          top: 31px;
+          z-index: 999;
+          padding: 16px;
+          background: var(--white);
+          box-shadow: 0px -1px 2px rgba(0, 0, 0, 0.05), 0px 6px 16px rgba(48, 49, 51, 0.18);
+          border-radius: 4px;
+          @include mq(xl-down) {
+            right: calc(50% - 125px);
+          }
+        }
+      }
+    }
+    .descriptions {
+      color: var(--brown);
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      text-transform: uppercase;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(53, 121, 252, 0.2);
+    }
+    .market {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid rgba(53, 121, 252, 0.2);
+      @media only screen and (max-width: 768px) {
+        padding-bottom: 16px;
+      }
+      .left {
+        display: flex;
+        align-items: center;
+        img {
+          min-width: 40px;
+          height: 40px;
+          margin-right: 12px;
+          @media only screen and (max-width: 768px) {
+            min-width: 32px;
+            height: 32px;
+            margin-right: 8px;
+          }
+        }
+        > span {
+          min-width: 40px;
+          height: 40px;
+          margin-right: 12px;
+          @media only screen and (max-width: 768px) {
+            min-width: 32px;
+            height: 32px;
+            margin-right: 8px;
+          }
+        }
+        > div {
+          display: flex;
+          flex-direction: column;
+          span {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 24px;
+            color: var(--third);
+          }
+          p {
+            font-size: 13px;
+            line-height: 16px;
+            color: var(--secondary_light);
+          }
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        span {
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 16px;
+          color: var(--secondary_light);
+        }
+        p {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 22px;
+          color: var(--secondary);
+        }
+      }
+    }
+    .info_balance {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      color: var(--secondary_light);
+      svg {
+        margin-right: 8px;
+      }
+      span{
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+      }
+    }
+
+    .amount {
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      > p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--primary);
+        margin-bottom: 22px;
+        @media only screen and (max-width: 768px) {
+          margin-bottom: 16px;
+        }
+      }
+
+      > div {
+        display: flex;
+        align-items: center;
+       
+    
+    justify-content: space-between;
+    width: calc(100% - 7px);
+
+
+        .block {
+          width: 70%;
+        }
+
+        > div {
+          position: relative;
+
+          p {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            color: var(--secondary_light);
+            margin-bottom: 8px;
+            display: flex;
+            height: 14px;
+          }
+
+          .block {
+            p {
+              display: flex;
+              padding: 0;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 14px;
+              color: var(--secondary_light);
+              margin-bottom: 8px;
+            }
+          }
+          .MuiInputBase-input {
+            height: 48px;
+            padding: 0 36px 0 16px;
+          }
+          .MuiInputAdornment-positionEnd {
+            position: absolute;
+            right: 8px;
+            top: -18px;
+          }
+          .MuiOutlinedInput-notchedOutline {
+            top: 0;
+            legend {
+              span {
+                display: none;
+              }
+            }
+          }
+        }
+        .max {
+          position: absolute;
+          right: 12px;
+          top: 10px;
+          width: 60px;
+          height: 30px;
+          background: #f5f8fd;
+          border: 1px solid #e2e2e2;
+          box-sizing: border-box;
+          border-radius: 6px;
+          cursor: pointer;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 14px;
+          text-transform: uppercase;
+          color: var(--secondary_light);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+    .deposit {
+      margin-bottom: 32px;
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 24px;
+      }
+      > p {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--secondary_light);
+        margin-bottom: 15px;
+        display: flex;
+      }
+      .rate {
+        .MuiSlider-valueLabel {
+          display: none;
+        }
+        .MuiSlider-mark {
+          width: 15px;
+          height: 15px;
+          background: #dadada;
+          border-radius: 50%;
+          margin: -6px 0 0 -6px;
+        }
+        .MuiSlider-rail {
+          background: #dadada;
+          border-radius: 6px;
+          height: 4px;
+          opacity: 1;
+        }
+        .MuiSlider-markActive {
+          opacity: 1;
+          background: #4279e3;
+        }
+        .MuiSlider-track {
+          height: 4px;
+          background: #4279e3;
+          border-radius: 6px;
+        }
+        .MuiSlider-thumb {
+          background: #ffffff;
+          width: 20px;
+          height: 20px;
+          border: 4px solid #4279e3;
+          margin-top: -8px;
+          margin-left: -9px;
+        }
+      }
+      .MuiSlider-markLabel {
+        margin-right: -5px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        margin-top: 5px;
+        color: var(--secondary);
+      }
+    }
+    .checkbox {
+      display: flex;
+      align-items: flex-start;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--secondary_light);
+      .checkbox-mui {
+        margin-right: 12px;
+      }
+    }
+    .color_block {
+      display: flex;
+      align-items: flex-start;
+      border: 1px solid rgba(252, 184, 53, 0.4);
+      box-sizing: border-box;
+      border-radius: 6px;
+      background: rgb(255, 248, 224);
+      padding: 12px;
+      margin: 24px 0;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 20px;
+      color: var(--secondary_light);
+      @media only screen and (max-width: 768px) {
+        padding: 11px;
+        margin: 16px 0 24px;
+      }
+      svg {
+        margin-right: 11px;
+        min-width: 18px;
+        height: 18px;
+      }
+    }
+    .button-mui {
+      div {
+        margin: 0 5px;
+        display: flex;
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.input-field {
+  position: relative;
+  display: inline-block;
+
+  &__label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--secondary_light);
+
+    .input-field--error & {
+      color: var(--error);
+    }
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__input {
+    padding: 15px !important;
+    width: 100% !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+    font-weight: 400 !important;
+    color: var(--secondary) !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(19, 15, 46, 0.2) !important;
+    border-radius: 6px !important;
+    transition: border-color 0.3s !important;
+
+    &:hover,
+    &:focus-visible {
+      border-color: var(--primary);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: rgba(17, 24, 39, 0.5);
+    }
+
+    &[type='password'] {
+      font-weight: 700;
+      letter-spacing: 5px;
+    }
+
+    .input-field--error & {
+      border-color: var(--error);
+    }
+  }
+
+  &__pass-btn {
+    position: absolute;
+    top: 26px;
+    right: 8px;
+    transform: translateY(-50%);
+    display: flex;
+    width: 32px;
+    height: 32px;
+    background-color: var(--white);
+
+    svg {
+      margin: auto;
+
+      path {
+        transition: stroke 0.3s;
+      }
+
+      &:hover path,
+      &:focus-visible path {
+        stroke: var(--primary);
+      }
+    }
+  }
+
+  &__helper {
+    display: block;
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--secondary_light);
+
+    .input-field--error & {
+      color: var(--error);
+    }
+  }
+  .MuiInput-underline:before,
+  .MuiInput-underline:after {
+    display: none;
+  }
+  .MuiInputBase-input {
+    padding: 0;
+  }
+}

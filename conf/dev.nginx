@@ -1,0 +1,47 @@
+server {
+    listen 80;
+    server_name client.globixcash.4-com.pro;
+    root /var/www/globixcash-client-frontend/builded;
+    index index.html index.htm;
+
+    charset utf-8;
+    gzip on;
+    gzip_comp_level 5;
+    gzip_disable "mdie6";
+    gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/javascript;
+
+    location ~* \.(sql|md) {
+        deny all;
+    }
+
+    access_log /var/www/globixcash-client-frontend/logs/nginx_access.log;
+    error_log /var/www/globixcash-client-frontend/logs/nginx_error.log;
+
+    error_page 404 /404.html;
+    error_page 500 502 503 504 /50x.html;
+    location = /50x.html {
+        root /usr/share/nginx/html;
+    }
+
+    location ~* /(?:uploads|files)/.*\.php$ {
+        deny all; # deny for uploaded scripts
+    }
+    location / {
+        try_files $uri $uri/ /index.html?$args;
+    }
+    location ~* ^.+\.(ogg|ogv|svg|svgz|eot|otf|woff|mp4|ttf|rss|atom|jpg|jpeg|gif|png|ico|zip|tgz|gz|rar|bz2|doc|xls|exe|ppt|tar|mid|midi|wav|bmp|rtf)$ {
+        access_log off;
+        log_not_found off;
+        expires max; # cache static
+    }
+    location = /robots.txt {
+        allow all;
+        log_not_found off;
+        access_log off;
+    }
+    location ~ /\. {
+        access_log off;
+        log_not_found off;
+        deny all;
+    }
+}

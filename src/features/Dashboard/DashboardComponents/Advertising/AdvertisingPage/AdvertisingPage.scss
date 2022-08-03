@@ -1,0 +1,393 @@
+@import "../../../../../../src/assets/styles/mixins";
+
+.advertising_page {
+  background: var(--white);
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 56px;
+    padding: 32px 60px 0;
+    @include mq(xl-down) {
+      margin: 24px 20px;
+      padding: 0;
+    }
+    @include mq(sm-down) {
+      margin: 20px;
+      flex-wrap: wrap;
+    }
+    svg {
+      margin: 0 6px;
+    }
+    a {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      color: var(--info);
+    }
+    span {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      color: var(--primary_light);
+    }
+  }
+  .content {
+    max-width: 1000px;
+    margin: 0 auto;
+    @include mq(xl-down) {
+      padding: 0 20px;
+    }
+    .icon {
+      margin-bottom: 52px;
+      img{
+        max-height: 520px;
+        display: block;
+        background-size: 100% 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0 auto;
+        border-radius: 8px;
+      }
+      @include mq(xl-down) {
+        margin-bottom: 32px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      }
+      @include mq(sm-down) {
+        margin-bottom: 24px;
+      }
+    }
+    .text_wrapper {
+      max-width: 768px;
+      margin: 0 auto;
+      position: relative;
+      .inner {
+        display: flex;
+        flex-direction: column;
+        .types {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 20px;
+          color: var(--blue);
+          display: flex;
+          justify-content: center;
+          margin-bottom: 8px;
+          flex-wrap: wrap;
+          >div{
+            margin: 0 4px;
+          }
+        }
+        .title {
+          font-weight: bold;
+          font-size: 36px;
+          line-height: 44px;
+          text-align: center;
+          justify-content: center;
+          color: var(--primary);
+          margin-bottom: 16px;
+          @include mq(sm-down) {
+            font-size: 26px;
+            line-height: 30px;
+          }
+        }
+        .info {
+          display: flex;
+          justify-content: center;
+          @include mq(sm-down) {
+            margin-bottom: 24px;
+          }
+          span {
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 24px;
+            color: var(--secondary);
+            margin-right: 8px;
+          }
+
+          p {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 24px;
+            color: var(--secondary_light);
+          }
+        }
+        .text {
+          margin: 50px 0 72px;
+          @include mq(xl-down) {
+            margin: 32px 0
+          }
+          @include mq(sm-down) {
+            margin: 24px 0
+          }
+        }
+      }
+      .social_mob{
+        @include mq(sm-down) {
+          display: flex;
+          position: fixed;
+          bottom: 16px;
+          right: 16px;
+          z-index: 999;
+        }
+        .btn{
+          >span{
+            display: none;
+            z-index: 999;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            background: var(--info);
+            @include mq(sm-down) {
+              display: flex;
+            }
+          }
+        }
+        .open{
+          >span{
+            background: var(--white);
+            box-shadow: 0px -1.2px 1.2px rgba(0, 0, 0, 0.03), 0px 2px 16px rgba(0, 0, 0, 0.08);
+          }
+          .social{
+            display: flex;
+          }
+        }
+      }
+      .social {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        left: -100px;
+        top: 0;
+        @include mq(xl-down) {
+          position: inherit;
+          left: 0;
+          flex-direction: row;
+          margin-bottom: 12px;
+        }
+        @include mq(sm-down) {
+          position: absolute;
+          flex-direction: column;
+          display: none;
+          padding: 4px;
+          top: -150px;
+          background: var(--white);
+          border-radius: 100px;
+          margin: 0;
+        }
+        > div {
+          display: flex;
+          align-items: center;
+          border-radius: 43px;
+          background: #FFFFFF;
+          padding: 4px;
+          transition: ease all 0.3s;
+          margin-bottom: 6px;
+          z-index: 1;
+          @include mq(xl-down) {
+            margin-right: 12px;
+            margin-bottom: 0px;
+            padding: 0;
+          }
+          @include mq(sm-down) {
+            margin: 0 0 6px 0;
+          }
+          button {
+            background: #ffffff;
+            border-radius: 50%;
+            min-width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+          }
+
+          span {
+            z-index: -1;
+            transition: ease all 0.3s;
+            width: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+            letter-spacing: 0.45px;
+            color: transparent;
+          }
+
+          &:hover {
+            box-shadow: (0px 12px 16px rgba(0, 0, 0, 0.08));
+
+            > span {
+              width: 100%;
+              margin: 0 20px 0 12px;
+              color: #3C5B97;
+              z-index: 2;
+            }
+            @include mq(xl-down) {
+              padding: 0;
+              > span {
+                width: 0;
+                margin: 0 ;
+                color: transparent;
+                z-index: -1;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .related_news {
+    padding: 48px 60px 86px;
+    background: #F5F8FD;
+    @include mq(xl-down) {
+      padding: 24px 20px;
+    }
+    @include mq(sm-down) {
+      padding: 20px;
+    }
+    > span {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: var(--primary);
+      margin-bottom: 36px;
+      display: flex;
+      @include mq(xl-down) {
+        margin-bottom: 24px;
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+    .slick-slider {
+      position: relative;
+    }
+    .slider_items {
+      box-sizing: border-box;
+      padding-right: 20px;
+      cursor: pointer;
+      &:hover{
+        .icon{
+          img{
+            transform: scale(1.05);
+          }
+        }
+      }
+      @media only screen and (max-width: 450px) {
+        padding-right: 0;
+      }
+      .slider_content {
+        display: flex;
+        flex-direction: column;
+        .icon {
+          margin-bottom: 12px;
+          border-radius: 8px;
+          overflow: hidden;
+          img {
+            transition: all ease 0.3s;
+            object-fit: cover;
+            height: 138px;
+            width: 100%;
+          }
+        }
+        .chapter {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 20px;
+          color: var(--blue);
+        }
+
+        .title {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 22px;
+          color: var(--primary);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+      }
+    }
+
+    .slick-prev {
+      font-size: 0;
+      position: absolute;
+      left: 0;
+      right: auto;
+      top: 58px;
+      transition: all ease 0.3s;
+      width: 40px;
+      height: 40px;
+      background: var(--white);
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+      z-index: 20;
+      border-radius: 40px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        background: url("../../../../../assets/images/ar_slide.svg") no-repeat;
+        right: calc(50% - 12px);
+        top: calc(50% - 12px);
+        width: 24px;
+        transition: all ease 0.3s;
+        height: 24px;
+        transform: rotate(180deg);
+      }
+
+      @media only screen and (max-width: 768px) {
+        display: none !important;
+      }
+    }
+
+    .slick-next {
+      font-size: 0;
+      position: absolute;
+      left: auto;
+      right: 0;
+      top: 58px;
+      transition: all ease 0.3s;
+      width: 40px;
+      height: 40px;
+      background: var(--white);
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+      z-index: 20;
+      border-radius: 40px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        background: url("../../../../../assets/images/ar_slide.svg") no-repeat;
+        right: calc(50% - 12px);
+        top: calc(50% - 12px);
+        width: 24px;
+        transition: all ease 0.3s;
+        height: 24px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        display: none !important;
+      }
+    }
+  }
+}
+.load_page{
+  margin: auto auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}

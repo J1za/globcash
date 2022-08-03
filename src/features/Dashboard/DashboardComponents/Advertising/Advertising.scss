@@ -1,0 +1,138 @@
+@import "../../../../../src/assets/styles/mixins";
+
+.client_information_block {
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 32px;
+  padding: 8px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  min-height: 210px;
+  @include mq(sm-down) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    padding: 0;
+  }
+  .left {
+    width: calc(50% - 12px);
+    margin-right: 24px;
+    position: relative;
+    @include mq(sm-down) {
+      width: 100%;
+      margin: 0;
+    }
+    span {
+      img {
+        max-height: 200px;
+        background-size: 100% 100%;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        border-radius: 6px;
+      }
+    }
+    div {
+      right: -16px;
+      bottom: 12px;
+      position: absolute;
+      width: 68px;
+      height: 68px;
+      background: rgba(45, 107, 225, 0.96);
+      border: 2px solid #ffffff;
+      transform: rotate(-6deg);
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include mq(sm-down) {
+        right: 16px;
+        bottom: -50px;
+      }
+    }
+  }
+  .right {
+    width: calc(50% - 12px);
+    padding-right: 20px;
+    @include mq(sm-down) {
+      width: 100%;
+      box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.03), 0px 4px 8px rgba(0, 0, 0, 0.07);
+      padding: 0;
+    }
+    .title {
+      padding: 12px 0;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 26px;
+      color: var(--black);
+      transition: all ease 0.3s;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+      @include mq(sm-down) {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 12px 20px;
+      }
+      svg {
+        margin: 0 0 -3px 6px;
+      }
+    }
+    .text {
+      font-size: 14px;
+      line-height: 20px;
+      @include mq(sm-down) {
+        padding: 0 20px 24px;
+        font-size: 12px;
+        line-height: 20px;
+        max-width: 100%;
+      }
+      span.link {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        text-decoration: underline;
+        transition: all ease 0.3s;
+        color: var(--blue);
+        cursor: pointer;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .all {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #eff4fb;
+    border-radius: 6px 0px;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    @include mq(sm-down) {
+      position: inherit;
+      padding: 10px 20px;
+      background: rgba(53, 121, 252, 0.1);
+      justify-content: center;
+    }
+    svg {
+      margin-right: 8px;
+    }
+    a {
+      margin-left: 3px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--blue);
+    }
+  }
+}

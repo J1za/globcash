@@ -1,0 +1,71 @@
+@import '../../../src/assets/styles/mixins';
+
+.dialog-mui {
+  &__paper {
+    min-width: 500px;
+    max-width: 500px;
+    color: inherit;
+    border-radius: 5px;
+    box-shadow: none;
+    @include mq(sm-down) {
+      min-width: 288px;
+      max-width: 288px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    overflow: auto;
+    padding: 32px;
+    max-height: 850px;
+    background-color: var(--white);
+    @include mq(sm-down) {
+      padding: 24px 16px;
+
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: var(--light);
+      border-radius: 2px;
+      -webkit-border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--blue);
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+
+      &:window-inactive {
+        background-color: var(--blue);
+      }
+    }
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    display: flex;
+    width: 24px;
+    height: 24px;
+
+    path {
+      transition: 0.3s ease;
+    }
+
+    &:hover {
+      path {
+        opacity: 1;
+        fill: var(--error);
+      }
+    }
+  }
+  &__close-icon {
+    margin: auto;
+  }
+}

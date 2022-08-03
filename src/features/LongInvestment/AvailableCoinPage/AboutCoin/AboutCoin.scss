@@ -1,0 +1,116 @@
+@import '../../../../../src/assets/styles/mixins';
+
+.about_coin_block {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-right: 128px;
+  font-weight: normal;
+  @include mq(xl-down) {
+    margin: 24px 0;
+    background: var(--white);
+    padding: 24px 60px;
+  }
+  @include mq(sm-down) {
+    box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.03), 0px 4px 8px rgba(0, 0, 0, 0.07);
+    padding: 24px 20px 32px;
+  }
+  & > h2 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .add {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    @include mq(xl-down) {
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      margin-right: 48px;
+      @include mq(xl-down) {
+        margin-right: 16px;
+        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+  .descriptions {
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--primary);
+    @include mq(xl-down) {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
+  }
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--secondary);
+  }
+  a {
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--info);
+  }
+  ul {
+    margin-left: 15px;
+    li {
+      list-style: disc;
+    }
+  }
+  .medium {
+    font-weight: 500;
+  }
+  .text {
+    overflow: hidden;
+    font-size: 18px;
+    max-height: 500px;
+    position: relative;
+    transition: all ease 0.3s;
+    @include mq(xl-down) {
+      max-height: 250px;
+    }
+    &:before {
+      background: linear-gradient(
+        181.86deg,
+        rgba(255, 255, 255, 0) -6.35%,
+        rgba(255, 255, 255, 0.95) 57.66%,
+        #ffffff 79.42%
+      );
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      content: '';
+      height: 100px;
+    }
+  }
+  .open {
+    max-height: 100%;
+    &:before {
+      display: none;
+    }
+  }
+  button {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--info);
+    svg {
+      margin-left: 4px;
+    }
+  }
+}

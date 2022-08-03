@@ -1,0 +1,7 @@
+.long_investment_coin_page {
+  background: var(--white);
+  @media only screen and (max-width: 768px) {
+    margin-bottom: -55px;
+    padding-bottom: 55px;
+  }
+}

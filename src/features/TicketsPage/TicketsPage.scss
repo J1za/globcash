@@ -1,0 +1,652 @@
+@import '../../../src/assets/styles/mixins';
+
+.tickets_page {
+  padding: 0 60px 88px;
+  @include mq(xl-down) {
+    padding: 0 32px 32px;
+  }
+  @include mq(sm-down) {
+    padding: 32px 20px 0;
+  }
+  .back {
+    display: flex;
+    margin: 32px 0 40px;
+    @include mq(xl-down) {
+      margin: 24px 0;
+    }
+    > div {
+      display: flex;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--info);
+      align-items: center;
+      cursor: pointer;
+      @include mq(xl-down) {
+      }
+      @include mq(sm-down) {
+        margin: 0 0 16px 16px;
+      }
+      svg {
+        margin-right: 6px;
+      }
+    }
+    @include mq(sm-down) {
+      display: none;
+    }
+  }
+  .wrapper {
+    display: flex;
+    border-radius: 4px;
+  }
+  .wrapper_content {
+    display: flex;
+    background: var(--white);
+    width: 100%;
+    @include mq(sm-down) {
+      display: none;
+    }
+  }
+  .wrapper_no_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--secondary_light);
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    svg {
+      margin-bottom: 24px;
+    }
+  }
+
+  .tickets_block {
+    min-height: 700px;
+    min-width: 320px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    background: #eff2f5;
+    border-radius: 4px 0px 0px 4px;
+    padding: 28px 12px 16px 16px;
+    position: relative;
+    > span {
+      position: absolute;
+      top: 45% !important;
+      left: 45% !important;
+    }
+    @include mq(xl-down) {
+      min-width: 250px;
+      width: 250px;
+      min-height: 500px;
+    }
+    @include mq(sm-down) {
+      min-height: 100%;
+      height: 100%;
+      background: transparent;
+      min-width: 100%;
+      width: 100%;
+      padding: 0;
+    }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      @include mq(sm-down) {
+        margin-bottom: 24px;
+      }
+      > div {
+        display: flex;
+        align-items: center;
+        > span {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 24px;
+          color: var(--primary);
+          margin-right: 8px;
+        }
+        > div {
+          padding: 4px 16px;
+          background: var(--white);
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 16px;
+          letter-spacing: 0.02em;
+          color: var(--blue);
+          > p {
+            background: var(--blue);
+            margin-right: 6px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+          }
+        }
+      }
+      > button {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .ticket_items {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      max-height: 540px;
+      height: 100%;
+      overflow-y: scroll;
+      /* width */
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: rgb(239, 239, 239);
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: rgb(45, 107, 225);
+        border-radius: 10px;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        cursor: pointer;
+      }
+      > div {
+        cursor: pointer;
+        > div {
+          opacity: 0.8;
+          background: #ffffff;
+          box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.03), 0px 4px 12px rgba(0, 0, 0, 0.05);
+          border-radius: 6px;
+          margin-bottom: 12px;
+          padding: 16px 12px 12px 16px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          .info_ticket {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            > div {
+              display: flex;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              color: var(--secondary);
+              align-items: center;
+              span {
+                margin-right: 8px;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: var(--blue);
+              }
+              p {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                color: var(--secondary_light);
+                margin-left: 4px;
+              }
+            }
+          }
+          .text_last {
+            max-width: 220px;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box !important;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: -0.4px;
+            color: var(--secondary);
+            opacity: 0.8;
+
+            svg {
+              margin-right: 4px;
+              width: 17px;
+            }
+            @include mq(xl-down) {
+              max-width: 80%;
+            }
+          }
+          .new_messages {
+            display: none;
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            background: var(--red);
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 20px;
+            color: var(--white);
+            border-radius: 18px;
+            z-index: 99;
+            padding: 0 8px;
+          }
+          .delete {
+            position: absolute;
+            display: flex;
+            right: 12px;
+            bottom: 12px;
+            z-index: 99;
+            cursor: pointer;
+          }
+        }
+        > span {
+          position: absolute;
+          right: -12px;
+          top: 220px;
+        }
+      }
+      .active {
+        opacity: 1;
+        .new_messages {
+          display: flex;
+        }
+        .delete {
+          display: none;
+        }
+      }
+      .no_items {
+        .text_no {
+          margin-bottom: 12px;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: -0.4px;
+          color: var(--secondary_08);
+          > svg {
+            margin-right: 4px;
+            margin-bottom: -3px;
+          }
+        }
+        > button {
+          margin: auto auto auto 0;
+          width: auto;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 20px;
+          color: #3579fc;
+        }
+      }
+      .use {
+        > div {
+          background: linear-gradient(0deg, #c2d6ff, #c2d6ff), #ffffff;
+        }
+      }
+    }
+  }
+
+  .chat_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .no_chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--secondary_light);
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    svg {
+      margin-bottom: 24px;
+    }
+  }
+
+  .head_chat {
+    padding: 0 32px;
+    min-height: 80px;
+    box-sizing: border-box;
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.03), 0px 4px 12px rgba(0, 0, 0, 0.05);
+    @include mq(sm-down) {
+      min-height: 72px;
+      padding: 0 20px 0 13px;
+    }
+    .left {
+      display: flex;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--secondary);
+      align-items: center;
+
+      > button {
+        margin-right: 12px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      span {
+        margin-right: 8px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--blue);
+      }
+    }
+    .right {
+      > div {
+        border: 1px solid #3579fc;
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 180px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: var(--blue);
+        cursor: pointer;
+        @include mq(sm-down) {
+          border: none;
+          width: auto;
+          height: auto;
+        }
+        svg {
+          margin-right: 6px;
+        }
+      }
+      button {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: var(--blue);
+        svg {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+
+  .messages_wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    > div {
+      > div {
+        overflow: auto !important;
+      }
+    }
+  }
+
+  .messages_empty-chat {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .closed-ticket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    &-txt {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #111827;
+      margin-top: 24px;
+      margin-bottom: 12px;
+
+      span {
+        font-weight: 400;
+        color: rgba(17, 24, 39, 0.7);
+      }
+    }
+    &-btn {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+
+      color: #2d6be1;
+      margin-bottom: 40px;
+    }
+  }
+
+  .form {
+    padding: 16px 24px 16px 12px;
+    background: #eff2f5;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin: 0 20px 18px;
+    justify-content: space-between;
+    @include mq(sm-down) {
+      background: transparent;
+      padding: 16px 8px;
+      border-radius: 0;
+      margin: 0;
+      border-top: 1px solid rgba(19, 15, 46, 0.2);
+    }
+    .input-mui__error-icon {
+      right: 17px;
+    }
+    .btn_controller {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      svg {
+        cursor: pointer;
+      }
+      > div {
+        cursor: pointer;
+        border-radius: 6px;
+        position: relative;
+        width: 48px;
+        height: 48px;
+        background: var(--white);
+        @include mq(sm-down) {
+          width: 24px;
+          height: 24px;
+        }
+        > input {
+          width: 48px;
+          height: 48px;
+          opacity: 0;
+          z-index: 5;
+          cursor: pointer;
+          @include mq(sm-down) {
+            width: 24px;
+            height: 24px;
+          }
+        }
+        > div {
+          cursor: pointer;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 14px;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          > span {
+            position: absolute;
+            bottom: -2px;
+            right: -3px;
+            background: var(--info);
+            border: 3px solid var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 12px;
+            color: var(--white);
+            padding: 2px 6px;
+            @include mq(sm-down) {
+              border: 2px solid var(--light);
+              padding: 0px 3px;
+              font-size: 11px;
+              bottom: 9px;
+              right: -6px;
+            }
+          }
+        }
+      }
+    }
+    .block {
+      width: 100%;
+      margin: 0 24px 0 12px;
+      @include mq(sm-down) {
+        margin: 0 16px;
+      }
+      input {
+        height: 48px;
+        padding: 0 16px;
+        background: var(--white);
+        border: 1px solid rgba(19, 15, 46, 0.2);
+        box-sizing: border-box;
+        border-radius: 6px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: var(--secondary);
+        @include mq(sm-down) {
+          padding: 0;
+          border: none;
+          height: 24px;
+        }
+        &::placeholder {
+          opacity: 0.5;
+        }
+      }
+      .MuiOutlinedInput-notchedOutline {
+        top: 0;
+        padding: 0;
+        border: none;
+      }
+      .PrivateNotchedOutline-root-13 {
+        top: 0;
+        padding: 0;
+        border: none;
+      }
+    }
+    .btn {
+      .button-mui {
+        min-width: 152px;
+        height: 48px;
+        @include mq(sm-down) {
+          height: 24px;
+          min-width: 24px;
+          padding: 0;
+          background: transparent;
+          &:hover {
+            box-shadow: none;
+          }
+        }
+        svg {
+          @include mq(sm-down) {
+            path {
+              stroke: var(--info);
+            }
+          }
+        }
+        span {
+          margin-left: 6px;
+          @include mq(sm-down) {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.use_content {
+  padding: 0;
+  .tickets_block {
+    display: none;
+  }
+  .wrapper_content {
+    display: flex;
+    min-height: 550px;
+  }
+}
+
+.tickets_dialog {
+  .title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--dark_second);
+    margin-bottom: 16px;
+    @include mq(sm-down) {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 24px;
+    }
+  }
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--primary_light);
+    span {
+      color: var(--primary);
+    }
+  }
+  .btn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    @include mq(sm-down) {
+    }
+    .button-mui--contained {
+      min-width: 153px;
+      margin-left: 20px;
+      @include mq(sm-down) {
+        min-width: calc(50% - 8px);
+        margin-left: 16px;
+      }
+    }
+    .button-mui--outlined {
+      min-width: 102px;
+      @include mq(sm-down) {
+        min-width: calc(50% - 8px);
+      }
+    }
+  }
+}

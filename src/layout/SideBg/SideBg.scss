@@ -1,0 +1,12 @@
+.side-bg {
+  padding: 32px;
+  width: 35%;
+  background: var(--info) url('../../assets/images/auth-bg.jpg') center bottom / cover no-repeat;
+
+  &__link {
+  }
+
+  &__logo {
+    max-width: 120px;
+  }
+}

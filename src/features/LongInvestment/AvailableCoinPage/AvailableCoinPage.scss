@@ -1,0 +1,18 @@
+@import "../../../../src/assets/styles/mixins";
+
+.available_coin_page{
+
+  .wrapper_coin{
+    background: var(--white);
+    display: flex;
+    padding: 48px 60px 64px;
+    @include mq(xl-down) {
+      padding: 0;
+      flex-direction: column-reverse;
+      background: transparent;
+    }
+    @include mq(sm-down) {
+      background: transparent;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@import '../../../../src/assets/styles/mixins';
+.promo_block {
+  max-width: 768px;
+  margin: 0 auto 32px;
+  padding: 32px;
+  background-image: url('../../../assets/images/promo.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mq(sm-down) {
+    background-image: url('../../../assets/images/promocode-sm.svg');
+
+    background-size: inherit;
+  }
+  @include mq(xs-down) {
+    background-position-x: 0px;
+    background-position-y: 0px;
+  }
+  &--form {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    @include mq(sm-down) {
+      max-width: 340px;
+    }
+    @include mq(xs-down) {
+      max-width: 280px;
+    }
+  }
+  &--title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 4px;
+    color: rgb(17, 24, 39);
+    @include mq(xs-down) {
+      max-width: 180px;
+      font-size: 18px;
+      margin-left: auto;
+    }
+  }
+  &--txt {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: rgba(17, 24, 39, 0.7);
+    margin-bottom: 14px;
+    @include mq(xs-down) {
+      max-width: 180px;
+      margin-left: auto;
+      font-size: 12px;
+    }
+  }
+  &--row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mq(sm-down) {
+      flex-direction: column;
+    }
+  }
+  &--input {
+    margin-right: 8px;
+    input {
+      box-sizing: border-box;
+      padding: 16px !important;
+      height: 48px;
+      max-width: 280px;
+      width: 100%;
+
+      font-size: 14px;
+      line-height: 16px;
+      color: #111827;
+      background: #fff;
+      &:placeholder {
+        color: rgba(17, 24, 39, 0.5);
+      }
+      @include mq(sm-down) {
+        max-width: 280px;
+      }
+    }
+    @include mq(sm-down) {
+      margin-bottom: 16px;
+      margin-right: 0;
+    }
+  }
+
+  &--btn {
+    @include mq(sm-down) {
+      width: 100%;
+      .button-mui {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.promo_popup {
+  display: flex;
+  flex-direction: column;
+  > svg {
+    display: flex;
+    margin: 0 auto;
+  }
+  > button {
+    margin-left: auto;
+  }
+  &--title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 4px;
+    color: rgb(17, 24, 39);
+    margin: 16px auto;
+    &.left {
+      margin: 16px 0;
+      display: flex;
+      align-items: center;
+    }
+    @include mq(xs-down) {
+      max-width: 180px;
+      font-size: 18px;
+      margin-left: auto;
+    }
+  }
+  &--txt {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(17, 24, 39, 0.7);
+    margin-bottom: 14px;
+    margin: 0 auto;
+    &.left {
+      margin: 16px 0;
+    }
+    @include mq(xs-down) {
+      max-width: 180px;
+      margin-left: auto;
+      font-size: 12px;
+    }
+  }
+}

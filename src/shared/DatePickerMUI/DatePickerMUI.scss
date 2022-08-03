@@ -1,0 +1,184 @@
+.date-picker-mui {
+  .MuiFormLabel-root {
+    font-family: inherit;
+    font-size: 14px;
+    transform: translate(14px, 17px) scale(1);
+
+    & + .MuiInput-formControl {
+      margin-top: 0;
+    }
+
+    &.Mui-focused {
+      color: var(--info);
+    }
+  }
+
+  .MuiInputLabel-shrink {
+    transform: translate(0, -6px) scale(0.75);
+  }
+
+  .MuiInputLabel-outlined.MuiInputLabel-shrink {
+    transform: translate(13px, -6px) scale(0.75);
+  }
+
+  .MuiInputLabel-filled.MuiInputLabel-shrink {
+    transform: translate(13px, 2px) scale(0.75);
+  }
+
+  .MuiInputBase-root {
+    padding-right: 0;
+    max-width: 200px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: inherit;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: var(--dark);
+    border-radius: 4px;
+
+    &.Mui-disabled {
+      color: var(--gray);
+    }
+  }
+
+  .MuiInputBase-input {
+    box-sizing: border-box;
+    padding: 14px;
+    height: 48px;
+  }
+
+  .MuiIconButton-root {
+    color: var(--gray);
+  }
+
+  // Outline input
+  .MuiOutlinedInput-root {
+    &:hover {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: var(--info);
+      }
+    }
+
+    &.Mui-focused {
+      .MuiOutlinedInput-notchedOutline {
+        border-width: 1px;
+        border-color: var(--info);
+      }
+    }
+
+    &.Mui-disabled {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: var(--gray);
+      }
+    }
+
+    &.Mui-error {
+      .MuiOutlinedInput-notchedOutline {
+        display: block;
+        position: absolute;
+        bottom: -16px;
+        color: var(--error) !important;
+        font-size: 10px;
+        white-space:nowrap;
+        margin: 0;
+      }
+    }
+  }
+
+  .MuiOutlinedInput-input {
+  }
+
+  .MuiOutlinedInput-notchedOutline {
+    border-color: var(--gray);
+    transition: border-color 0.3s;
+  }
+
+  // Standard input & Filled input
+  .MuiInput-underline,
+  .MuiFilledInput-underline {
+    &:hover:not(.Mui-disabled):before {
+      border-bottom: 1px solid var(--info);
+    }
+
+    &:before {
+      border-color: var(--gray);
+    }
+
+    &:after {
+      border-bottom: 1px solid var(--info);
+    }
+  }
+
+  // Filled input
+  .MuiFilledInput-root {
+    background-color: var(--light);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  .MuiFormHelperText-root.Mui-error {
+    color: var(--error);
+    display: block;
+    position: absolute;
+    bottom: -16px;
+    font-size: 10px;
+    white-space:nowrap;
+    margin: 0;
+  }
+}
+.MuiFormHelperText-root.Mui-error{
+  color: var(--error);
+  display: block;
+  position: absolute;
+  bottom: -16px;
+  font-size: 10px;
+  white-space:nowrap;
+  margin: 0;
+}
+
+// Calendar
+.MuiPickersBasePicker-container {
+  .MuiPickersToolbar-toolbar {
+    background-color: var(--info);
+  }
+
+  .MuiPickersBasePicker-pickerView {
+    background-color: var(--white);
+  }
+
+  .MuiButton-text,
+  .MuiTypography-root {
+    font-family: inherit;
+  }
+  .MuiTypography-alignCenter {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #23262F;
+  }
+
+  .MuiPickersDay-day {
+    color: var(--primary);
+  }
+
+  .MuiPickersDay-dayDisabled {
+    color: var(--gray);
+  }
+
+  .MuiPickersDay-daySelected {
+    color: var(--white);
+    background-color: var(--info);
+    border-radius: 12px;
+  }
+  .MuiPickersCalendarHeader-dayLabel{
+    color: #777E91;
+  }
+}
+
+.MuiPickersModal-dialogRoot {
+  .MuiButton-textPrimary {
+    color: var(--info);
+  }
+}

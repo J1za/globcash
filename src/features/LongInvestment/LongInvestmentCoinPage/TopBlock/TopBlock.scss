@@ -1,0 +1,118 @@
+.top_block_coin {
+  .coin {
+    background: rgba(53, 121, 252, 0.2);
+    .breadcrumbs {
+      padding: 32px 60px 56px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 32px;
+      @media only screen and (max-width: 1360px) {
+        padding: 24px 16px;
+        margin: 0;
+      }
+      svg {
+        margin: 0 6px;
+      }
+      a {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+        color: var(--info);
+      }
+      span {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+        color: var(--primary_light);
+      }
+    }
+    .icon {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 56px;
+      img {
+        background-size: 100% 100%;
+        max-width: 1000px;
+        @media only screen and (max-width: 1360px) {
+          width: 100%;
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+  .info {
+    max-width: 768px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(66, 121, 227, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media only screen and (max-width: 1360px) {
+      width: 100%;
+      padding: 0 20px;
+    }
+    @media only screen and (max-width: 768px) {
+      padding-top: 80px;
+      margin-top: -100px;
+      background: var(--white);
+    }
+    .avatar {
+      margin-top: -12px;
+      margin-bottom: 8px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .name {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--primary);
+    }
+
+    .mail {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 16px;
+      color: var(--secondary_light);
+    }
+    .title {
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 44px;
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 16px;
+      @media only screen and (max-width: 1360px) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    .date {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 18px;
+      color: var(--secondary_light);
+      margin-bottom: 36px;
+      @media only screen and (max-width: 1360px) {
+        margin-bottom: 24px;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 12px;
+      }
+      & > svg {
+        margin-right: 4px;
+        @media only screen and (max-width: 768px) {
+          width: 20px;
+          height: 20px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

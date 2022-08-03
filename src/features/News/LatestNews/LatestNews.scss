@@ -1,0 +1,196 @@
+@import "../../../../src/assets/styles/mixins";
+
+.latest_news_wrapper{
+  padding: 28px;
+  margin-bottom: 88px;
+  overflow: hidden;
+  @include mq(sm-down) {
+    padding: 0;
+    margin-bottom: 32px;
+  }
+  .title{
+    display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    @include mq(sm-down) {
+      padding: 24px 20px 0px;
+    }
+    >span{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+      white-space: nowrap;
+      color: var(--primary);
+
+      @include mq(sm-down) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    >div{
+      display: flex;
+      align-items: center;
+      overflow: auto;
+      width: 100%;
+      margin: 12px 0 6px;
+      @include scrollbar(8px, var(--grey_light), var(--light), 5px, 2px);
+      >div{
+        min-width: max-content;
+        width: 100%;
+        display: flex;
+      }
+      button{
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: var(--secondary);
+        padding: 4px 12px;
+        border-radius: 16px;
+        white-space: nowrap;
+        margin:  0 12px 6px 0;
+        @include mq(xl-down) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      .active{
+        background: rgba(53, 121, 252, 0.08);
+        color: var(--blue);
+      }
+    }
+  }
+  .news_wrapper{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(53, 121, 252, 0.2);
+
+    @include mq(sm-down) {
+      padding: 0 20px;
+        border-bottom: 1px solid rgba(53, 121, 252, 0.2);
+    }
+    >div{
+      border-top: 1px solid rgba(53, 121, 252, 0.2);
+      display: flex;
+      padding: 20px 0;
+      cursor: pointer;
+      &:hover{
+        .icon{
+          img{
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+    >div:first-of-type{
+      border-top: none;
+    }
+    .icon{
+      overflow: hidden;
+      margin-right: 24px;
+      min-width: 280px;
+      width: 280px;
+      min-height: 170px;
+      height: 170px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      transition: all ease 0.3s;
+      border-radius: 8px;
+      @include mq(sm-down) {
+        min-width: 56px;
+        width: 56px;
+        min-height: 56px;
+        height: 56px;
+        margin-right: 8px;
+      }
+      img{
+        border-radius: 8px;
+        background-size: 100% 100%;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        transition: all ease 0.3s;
+      }
+    }
+    .info_news{
+      display: flex;
+      flex-direction: column;
+      >span{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        color:var(--blue);
+        margin-bottom: 4px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        p{
+          margin-right: 12px;
+        }
+        @include mq(sm-down) {
+          margin-bottom: 6px;
+        }
+      }
+      .name{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--primary);
+        margin-bottom: 12px;
+        @include mq(sm-down) {
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 8px;
+        }
+        svg {
+          margin: 0 0 -3px 6px;
+        }
+      }
+      >p{
+        font-size: 13px;
+        line-height: 22px;
+        color:var(--secondary);
+        margin-bottom: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        @include mq(sm-down) {
+         display: none;
+        }
+      }
+      .author{
+        display: flex;
+        align-items: center;
+        span{
+          font-style: normal;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 24px;
+          color: var(--secondary);
+          margin-right: 8px;
+          @include mq(sm-down) {
+            font-size: 12px;
+          }
+        }
+        p{
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 24px;
+          color: var(--secondary_light);
+          @include mq(sm-down) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .pagination-container{
+    padding: 0;
+    @include mq(sm-down) {
+      padding: 20px;
+    }
+  }
+}

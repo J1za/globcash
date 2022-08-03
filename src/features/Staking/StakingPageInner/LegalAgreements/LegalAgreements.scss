@@ -1,0 +1,129 @@
+.legal_agreements_block{
+  background: #FFFFFF;
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.03), 0px 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  margin-bottom: 32px;
+  padding: 30px 28px 24px;
+  @media only screen and (max-width: 768px) {
+    padding: 24px 21px 20px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .title{
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(----primary);
+    @media only screen and (max-width: 768px) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  .descriptions{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--primary_light);
+    margin-bottom: 12px;
+  }
+  .time{
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--secondary);
+    svg{
+      margin-right: 10px;
+    }
+  }
+  .btn_download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    @media only screen and (max-width: 768px) {
+      margin-top: 20px;
+    }
+    button{
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      color: var(--blue);
+      svg{
+        margin-right: 8px;
+      }
+    }
+  }
+  .block{
+    padding: 24px 0 0;
+    border-top: 1px solid rgba(53, 121, 252, 0.2);
+    @media only screen and (max-width: 768px) {
+      padding: 20px 0 18px;
+    }
+    .info{
+      padding: 4px 0 8px;
+      div{
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+          font-size: 14px;
+          line-height: 16px;
+          color: var(--secondary_light);
+        }
+
+      }
+    }
+    .amount{
+      border-top: 1px dashed rgba(53, 121, 252, 0.2);
+      display: flex;
+      margin: 0 -28px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 38px 28px 0;
+      position: relative;
+      @media only screen and (max-width: 768px) {
+        padding: 38px 20px 0;
+        margin: 0 -20px;
+      }
+      &:before{
+        position: absolute;
+        content: '';
+        top: -12px;
+        width: 24px;
+        height: 24px;
+        left: -12px;
+        background: #f5f8fd;
+        border-radius: 0 50% 50% 0;
+      }
+      &:after{
+        position: absolute;
+        content: '';
+        top: -12px;
+        width: 24px;
+        height: 24px;
+        right: -12px;
+        background: #f5f8fd;
+        border-radius: 50% 0 0 50%;
+      }
+      span{
+        text-transform: uppercase;
+        color: var(--secondary_light);
+        font-weight: 600;
+      }
+      p{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--secondary);
+      }
+    }
+  }
+}

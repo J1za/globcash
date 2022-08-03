@@ -1,0 +1,211 @@
+.hold_balance_block {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+  display: flex;
+  background: var(--white);
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 24px 28px;
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.03), 0px 4px 8px rgba(0, 0, 0, 0.05);
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 24px;
+    padding: 24px 20px;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media only screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 34px;
+      color: var(--primary);
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 16px;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    .btn_chart {
+      background: rgba(66, 121, 227, 0.1);
+      border: 1px solid rgba(226, 226, 226, 0.5);
+      box-sizing: border-box;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      padding: 9px 4px;
+      &.switch {
+        border-radius: 16px;
+        border: 1px solid rgba(53, 121, 252, 0.28);
+        background: transparent;
+        box-sizing: border-box;
+        height: 32px;
+
+        button {
+          color: #111827;
+          height: 26px;
+          margin: 0;
+          border-radius: 16px;
+          padding: 5px 10px;
+          transition: all 0.3s;
+          &:hover,
+          &.active {
+            box-shadow: -1px 1px 2px rgba(53, 121, 252, 0.24);
+            transition: all 0.3s;
+            background: var(--blue);
+            color: #fff;
+          }
+          &:first-child {
+            margin-right: 5px;
+          }
+        }
+      }
+      button {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 14px;
+        color: rgba(17, 24, 39, 0.5);
+        margin: 0px 12px;
+      }
+      .active {
+        color: var(--blue);
+      }
+    }
+  }
+  .row-container {
+    display: flex;
+    h3 {
+      margin-right: 20px;
+    }
+  }
+  .chart {
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+      &::-webkit-scrollbar-track {
+        -webkit-border-radius: 2px;
+        background: #e3e6eb;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #3579fc;
+        border-radius: 2px;
+      }
+      &::-webkit-scrollbar-thumb:window-inactive {
+        background: #3579fc;
+        border-radius: 2px;
+      }
+      overflow: auto;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+      @media only screen and (max-width: 768px) {
+        //min-width: 831px;
+        width: 100%;
+      }
+    }
+  }
+  .no_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0 120px;
+    @media only screen and (max-width: 768px) {
+      padding: 36px 0 60px;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 34px;
+      width: 100%;
+      display: flex;
+      margin-bottom: 44px;
+      color: var(--primary);
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 16px;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    span {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 12px;
+      margin-top: 16px;
+      color: var(--secondary_light);
+    }
+  }
+  .title.mb-28.chart-container {
+    display: flex;
+    flex-direction: column;
+    .chart-head {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    @media only screen and (max-width: 2200px) {
+      .chart-head {
+        max-width: 1000px;
+      }
+    }
+    @media only screen and (max-width: 1979px) {
+      .chart-head {
+        max-width: 800px;
+      }
+    }
+    @media only screen and (max-width: 1680px) {
+      .chart-head {
+        max-width: 600px;
+      }
+    }
+    @media only screen and (max-width: 1470px) {
+      .chart-head {
+        max-width: 500px;
+      }
+      .highcharts-container {
+        width: 100% !important;
+        max-width: 500px !important;
+      }
+    }
+  }
+}
+
+.hold_balance_block {
+  text {
+    font-size: 8px !important;
+  }
+}
+
+.highcharts-html-tooltip {
+  border: 1px solid #000;
+  background: red;
+  display: block;
+  padding: 5px !important;
+  width: 100px;
+}
+
+.textContainer {
+  color: black;
+}
+.textContainer1 {
+  opacity: 1;
+  background: white;
+}
+
+.tooltipwrapper {
+  display: flex;
+  flex-direction: column;
+}
+.textContainer {
+  font-size: 12px !important;
+}

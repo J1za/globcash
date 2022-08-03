@@ -1,0 +1,81 @@
+$sizes: 100;
+$mediumSizes: 300;
+$bigSizes: 2000;
+$unit: 1px;
+
+$m_list: m margin;
+$ml_list: ml margin-left;
+$mt_list: mt margin-top;
+$mb_list: mb margin-bottom;
+$mr_list: mr margin-right;
+$p_list: p padding;
+$pl_list: pl padding-left;
+$pt_list: pt padding-top;
+$pb_list: pb padding-bottom;
+$pr_list: pr padding-right;
+
+$rules: $m_list $ml_list $mt_list $mb_list $mr_list $p_list $pl_list $pt_list $pb_list $pr_list;
+
+// For margin & padding
+@mixin generateIndentClass($prefix, $property, $i) {
+  .#{$prefix}-#{$i} {
+    #{$property}: $i * $unit;
+  }
+}
+
+@mixin widthAndHeight {
+  @for $i from 1 through $bigSizes {
+    $value: $i * $unit;
+
+    // min/max-width in px
+    .min-w-#{$i} {
+      min-width: $value;
+    }
+    .max-w-#{$i} {
+      max-width: $value;
+    }
+    .min-h-#{$i} {
+      min-height: $value;
+    }
+    .max-h-#{$i} {
+      max-height: $value;
+    }
+
+    // For margin & padding - X/Y
+    @if $i <= $mediumSizes {
+      .mx-#{$i} {
+        margin-left: $value;
+        margin-right: $value;
+      }
+      .my-#{$i} {
+        margin-top: $value;
+        margin-bottom: $value;
+      }
+      .px-#{$i} {
+        padding-left: $value;
+        padding-right: $value;
+      }
+      .py-#{$i} {
+        padding-top: $value;
+        padding-bottom: $value;
+      }
+
+      // Generate rules
+      @each $item in $rules {
+        @include generateIndentClass(nth($item, 1), nth($item, 2), $i);
+      }
+    }
+
+    // width in percents
+    @if $i <= $sizes {
+      .w-#{$i} {
+        width: $i * 1%;
+      }
+      .h-#{$i} {
+        height: $i * 1%;
+      }
+    }
+  }
+}
+
+@include widthAndHeight;

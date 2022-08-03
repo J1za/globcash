@@ -1,0 +1,18 @@
+// You need to import the function into rootReducer.js
+import { {{constantCase name}} } from './{{camelCase name}}ActionTypes';
+
+const INITIAL_STATE = {
+  {{camelCase name}}Error: {},
+  {{camelCase name}}Success: {},
+};
+
+export default function (state = INITIAL_STATE, action) {
+  switch (action.type) {
+    case {{constantCase name}}.TYPE_FAIL:
+      return {...state, signInError: action.error.response.data};
+    case {{constantCase name}}.TYPE_SUCCESS:
+      return {...state, userInfo: action.payload.data};
+    default:
+      return state;
+  }
+}

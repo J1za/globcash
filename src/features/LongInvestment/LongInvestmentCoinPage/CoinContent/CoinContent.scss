@@ -1,0 +1,10 @@
+.coin_content {
+  max-width: 768px;
+  margin: 48px auto;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--secondary);
+  @media only screen and (max-width: 768px) {
+    margin: 32px 20px;
+  }
+}

@@ -1,0 +1,403 @@
+@import '../../../../../src/assets/styles/mixins';
+
+.goggle_dialog {
+  .title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--primary);
+    display: flex;
+    margin-bottom: 24px;
+    @include mq(sm-down) {
+      margin-bottom: 16px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+  .top_linear {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    span {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 18px;
+      color: var(--secondary_light);
+      margin-bottom: 12px;
+      opacity: 0;
+    }
+    div {
+      background: rgba(200, 200, 200, 0.7);
+      border-radius: 6px;
+      height: 6px;
+      width: 100%;
+      display: flex;
+      position: relative;
+    }
+  }
+  .middle {
+    margin: 0 8px;
+    display: flex;
+  }
+  .MuiStepLabel-label.MuiStepLabel-alternativeLabel {
+    margin: 0;
+    @include mq(sm-down) {
+      //display: none;
+    }
+  }
+
+  .MuiStepConnector-alternativeLabel {
+    display: none;
+  }
+  .MuiStepper-root {
+    padding: 0;
+  }
+  .MuiStep-horizontal {
+    padding: 0;
+  }
+  .MuiStepLabel-iconContainer.MuiStepLabel-alternativeLabel {
+    display: none;
+  }
+  .MuiStepLabel-active {
+    .desc {
+      span {
+        opacity: 1;
+        color: #4279e3;
+        font-weight: 600;
+      }
+      div {
+        background: #4279e3;
+      }
+    }
+    .mob {
+      @include mq(sm-down) {
+        display: flex !important;
+      }
+    }
+  }
+  .MuiStepLabel-completed {
+    .desc {
+      span {
+        opacity: 0.5;
+      }
+      div {
+        background: #4279e3;
+      }
+    }
+  }
+  .MuiStep-alternativeLabel {
+    @include mq(sm-down) {
+      flex: auto;
+      position: absolute;
+      left: 16px;
+    }
+  }
+
+  .desc {
+    @include mq(sm-down) {
+      display: none;
+    }
+  }
+
+  .mob {
+    display: none;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    color: #4279e3;
+  }
+
+  .three_btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include mq(sm-down) {
+      justify-content: space-between;
+    }
+    .button-mui {
+      min-width: 153px;
+      width: 153px;
+      height: 48px;
+      @include mq(sm-down) {
+        min-width: calc(50% - 8px);
+        width: calc(50% - 8px);
+      }
+      &--outlined {
+        min-width: 100px;
+        width: 100px;
+        margin-right: 20px;
+        @include mq(sm-down) {
+          margin-right: 16px;
+          min-width: calc(50% - 8px);
+        }
+      }
+    }
+  }
+  .two_btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include mq(sm-down) {
+      justify-content: space-between;
+    }
+    .button-mui {
+      min-width: 153px;
+      width: 153px;
+      height: 48px;
+      @include mq(sm-down) {
+        min-width: calc(50% - 8px);
+        width: calc(50% - 8px);
+      }
+      &--outlined {
+        min-width: 100px;
+        width: 100px;
+        margin-right: 20px;
+        @include mq(sm-down) {
+          margin-right: 16px;
+          min-width: calc(50% - 8px);
+        }
+      }
+    }
+  }
+  .three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > span {
+      margin: 32px 0 24px;
+      display: flex;
+      text-align: left;
+      font-size: 14px;
+      line-height: 18px;
+      color: var(--secondary_light);
+      width: 100%;
+      justify-content: flex-start;
+      @include mq(sm-down) {
+        margin: 32px 0;
+      }
+    }
+    .block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 48px;
+      @include mq(sm-down) {
+        margin-bottom: 40px;
+      }
+      span {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--secondary_light);
+        display: flex;
+        margin-bottom: 8px;
+      }
+      p {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--secondary_light);
+        margin-top: 4px;
+        display: flex;
+      }
+      .input-mui {
+        input {
+          height: 48px;
+          padding: 0 16px;
+          box-sizing: border-box;
+          font-size: 14px;
+          line-height: 16px;
+        }
+        fieldset {
+          top: 0;
+          legend {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .more_step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      display: flex;
+      margin: 16px 0 54px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: var(--secondary_light);
+    }
+  }
+
+  .one {
+    display: flex;
+    flex-direction: column;
+    > svg {
+      margin: 40px auto 32px;
+      @include mq(sm-down) {
+        margin: 32px auto;
+      }
+    }
+    > p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: var(--secondary_light);
+      display: flex;
+      margin-bottom: 20px;
+    }
+    > div {
+      margin-bottom: 24px;
+      .MuiRadio-colorSecondary.Mui-checked {
+        color: var(--info);
+      }
+      .MuiIconButton-colorSecondary:hover {
+        background: transparent;
+      }
+      .MuiFormControlLabel-label {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: var(--secondary_light);
+      }
+    }
+  }
+  .two {
+    .ios,
+    .android {
+      .text {
+        display: flex;
+        flex-direction: column;
+        margin: 36px 0 28px;
+        span {
+          margin-bottom: 12px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+          color: var(--secondary_light);
+          display: block;
+          p {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-left: 3px;
+            display: inline-block;
+          }
+          a {
+            margin-left: 3px;
+            color: var(--info);
+          }
+        }
+      }
+      .qr_cod {
+        display: flex;
+        justify-content: center;
+
+        margin: 0 auto;
+        svg {
+          width: 160px;
+          height: 160px;
+          filter: drop-shadow(0px -1px 1px rgba(0, 0, 0, 0.04)) drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
+          border-radius: 8px;
+        }
+      }
+      > p.pulse {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: var(--info);
+        display: flex;
+        justify-content: center;
+        margin: 8px 0 62px;
+        cursor: pointer;
+        @include mq(sm-down) {
+          margin: 8px 0 52px;
+        }
+      }
+    }
+    .android,
+    .ios {
+      > p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--primary);
+        margin: 32px 0 24px;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 23px;
+        span {
+          margin-bottom: 12px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+          color: var(--secondary_light);
+          display: block;
+          p {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-left: 3px;
+            display: inline-block;
+          }
+        }
+      }
+      .color {
+        border: 1px solid #c4c4c4;
+        box-sizing: border-box;
+        border-radius: 6px;
+        padding: 16px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+        > div {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 8px;
+          > span {
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--secondary);
+            margin-right: 12px;
+          }
+        }
+        > p {
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+          color: var(--secondary_light);
+          svg {
+            margin-right: 9px;
+            min-width: 18px;
+            width: 18px;
+          }
+        }
+      }
+      > span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--secondary_light);
+        display: block;
+        margin-bottom: 90px;
+        @include mq(sm-down) {
+          margin-bottom: 70px;
+        }
+        p {
+          color: var(--secondary);
+          font-weight: 600;
+          margin-left: 3px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

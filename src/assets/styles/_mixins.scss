@@ -1,0 +1,85 @@
+// Media queries
+$xs: 575px; // 35.938em / phone @ portrait
+$sm: 576px; // 36em / phone @ landscape / small tablet (portrait
+$md: 768px; // 48em / small tablet (landscape) / large tablet (portrait)
+$lg: 992px; // 62em / large tablet (landscape) / small desktop
+$xl: 1200px; // 75em / standard desktop
+$xxl: 1400px; // 87.5em / large desktop
+$tbp: 369px; //small table pagination 
+$unit: 1px;
+
+@mixin mq($point) {
+  $media-query: false;
+
+  @if $point == sm {
+    $media-query: "(min-width: #{$sm})";
+  } @else if $point == md {
+    $media-query: "(min-width: #{$md})";
+  } @else if $point == lg {
+    $media-query: "(min-width: #{$lg})";
+  } @else if $point == xl {
+    $media-query: "(min-width: #{$xl})";
+  } @else if $point == xxl {
+    $media-query: "(min-width: #{$xxl})";
+  } @else if $point== tbp {
+    $media-query: "(min-width: #{$tbp})";
+  }
+
+  @if $point == xs-down {
+    $media-query: "(max-width: #{$sm - $unit})";
+  } @else if $point == sm-down {
+    $media-query: "(max-width: #{$md - $unit})";
+  } @else if $point == md-down {
+    $media-query: "(max-width: #{$lg - $unit})";
+  } @else if $point == lg-down {
+    $media-query: "(max-width: #{$xl - $unit})";
+  } @else if $point == xl-down {
+    $media-query: "(max-width: #{$xxl - $unit})";
+  }
+
+  @if $point == xs-only {
+    $media-query: "(min-width: #{$xs}) and (max-width: #{$sm - $unit})";
+  } @else if $point == sm-only {
+    $media-query: "(min-width: #{$sm}) and (max-width: #{$md - $unit})";
+  } @else if $point == md-only {
+    $media-query: "(min-width: #{$md}) and (max-width: #{$lg - $unit})";
+  } @else if $point == lg-only {
+    $media-query: "(min-width: #{$lg}) and (max-width: #{$xl - $unit})";
+  } @else if $point == xl-only {
+    $media-query: "(min-width: #{$xl}) and (max-width: #{$xxl - $unit})";
+  }
+
+  @if $media-query {
+    @media screen and #{$media-query} {
+      @content;
+    }
+  } @else {
+    @warn 'A breakpoint named "#{$point}" is not available in the breakpoint map';
+  }
+}
+
+//Custom scrollbar
+@mixin scrollbar($size, $thumb-color, $track-color, $thumb-radius: 0, $track-radius: 0) {
+  // for Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    border-radius: $thumb-radius;
+    -webkit-border-radius: $thumb-radius;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $track-color;
+    border-radius: $track-radius;
+    -webkit-border-radius: $track-radius;
+  }
+  // for Internet Explorer
+  & {
+    scrollbar-face-color: $thumb-color;
+    scrollbar-track-color: $track-color;
+  }
+}

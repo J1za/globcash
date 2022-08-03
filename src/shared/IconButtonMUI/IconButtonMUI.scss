@@ -1,0 +1,35 @@
+.icon-button-mui {
+  color: var(--info);
+
+  &:hover {
+    background-color: lighten(#3796f6, 37%);
+  }
+
+  &--color-primary {
+    color: var(--primary);
+
+    &:hover {
+      background-color: lighten(#204569, 70%);
+    }
+  }
+
+  &--color-secondary {
+    color: var(--error);
+
+    &:hover {
+      background-color: lighten(#e44b4b, 37%);
+    }
+  }
+
+  &--edge-start {
+  }
+
+  &--edge-end {
+  }
+
+  &--size-small {
+  }
+
+  &__label {
+  }
+}

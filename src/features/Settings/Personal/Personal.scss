@@ -1,0 +1,439 @@
+@import "../../../../src/assets/styles/mixins";
+
+.personal_block {
+  max-width: 768px;
+  margin: 0 auto 32px;
+  @include mq(sm-down) {
+    width: auto;
+    margin: 0 auto 24px;
+  }
+  .title_page {
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    color: var(--primary);
+    @include mq(sm-down) {
+      margin: 0 0 24px 16px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  .personal {
+    padding: 32px;
+    @include mq(sm-down) {
+      padding: 24px 20px;
+    }
+    .title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+      color: var(--primary);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      @include mq(sm-down) {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 24px;
+      }
+      .verify {
+        border-radius: 16px;
+        margin-left: 12px;
+        padding: 3px 12px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 5px;
+        }
+        &.false {
+          background: linear-gradient(87.74deg, #ff7a2f -16.31%, #ffa573 99.21%);
+        }
+        &.true {
+          background: linear-gradient(86.98deg, #43c32a -3.78%, #7ae267 103.17%);
+        }
+      }
+    }
+  }
+  .download_wrapper_file {
+    border: 1px solid rgba(53, 121, 252, 0.2);
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    @include mq(sm-down) {
+      padding: 24px;
+      flex-direction: column;
+    }
+    > div {
+      display: flex;
+      @include mq(sm-down) {
+        flex-direction: column;
+      }
+    }
+    .avatar {
+      margin-right: 24px;
+      height: 72px;
+      width: 72px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+      @include mq(sm-down) {
+        margin: 0 0 24px;
+        height: 64px;
+        width: 64px;
+      }
+      p {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 20px;
+        font-feature-settings: "tnum" on, "lnum" on;
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 72px;
+        height: 72px;
+        background: #a484ff;
+        border: 1px solid rgba(53, 121, 252, 0.1);
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 99px;
+        @include mq(sm-down) {
+          height: 64px;
+          width: 64px;
+        }
+      }
+    }
+    .btn_file {
+      margin-right: 24px;
+      @include mq(sm-down) {
+        margin: 0 auto 24px;
+      }
+      img {
+        border-radius: 50%;
+        height: 72px;
+        width: 72px;
+        object-fit: cover;
+        @include mq(sm-down) {
+          height: 64px;
+          width: 64px;
+        }
+      }
+    }
+    .btn_controller {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      cursor: pointer;
+      @include mq(sm-down) {
+        align-items: center;
+      }
+      > p {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+        color: var(--secondary_light);
+        display: flex;
+        margin-top: 10px;
+      }
+      > div {
+        display: flex;
+        align-items: center;
+        > button {
+          margin-left: 12px;
+          border: 1px solid var(--red);
+          box-sizing: border-box;
+          border-radius: 6px;
+          width: 105px;
+          height: 36px;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 14px;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          color: var(--red);
+          transition: all ease 0.3s;
+          justify-content: center;
+          &:hover {
+            background: var(--red);
+            color: var(--white);
+          }
+        }
+        > div {
+          cursor: pointer;
+          width: 105px;
+          height: 36px;
+          background: #3579fc;
+          border-radius: 6px;
+          color: var(--white);
+          position: relative;
+          > input {
+            width: 105px;
+            height: 36px;
+            opacity: 0;
+            z-index: 5;
+            cursor: pointer;
+          }
+          > div {
+            cursor: pointer;
+            position: absolute;
+            top: calc(50% - 7px);
+            left: calc(50% - 34px);
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 14px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+
+  .verification {
+    border: 1px solid rgba(53, 121, 252, 0.2);
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 24px 24px 12px 24px;
+    display: flex;
+    flex-direction: column;
+    @include mq(sm-down) {
+      padding: 20px 16px;
+    }
+    > div {
+      padding-bottom: 24px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(53, 121, 252, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      @include mq(sm-down) {
+        padding-bottom: 16px;
+        margin-bottom: 12px;
+        flex-direction: column;
+      }
+      > button {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--info);
+        @include mq(sm-down) {
+          margin-top: 16px;
+        }
+      }
+      > div {
+        display: flex;
+        @include mq(sm-down) {
+          flex-direction: column;
+        }
+        svg {
+          margin-right: 16px;
+          @include mq(sm-down) {
+            flex-direction: column;
+            margin: 0 0 12px;
+          }
+        }
+        > div {
+          display: flex;
+          flex-direction: column;
+          span {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: var(--secondary);
+            margin-bottom: 6px;
+            display: flex;
+          }
+          p {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 18px;
+            color: var(--secondary_light);
+          }
+        }
+      }
+    }
+    > span {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+      color: var(--secondary_light);
+      @include mq(sm-down) {
+        align-items: flex-start;
+      }
+      svg {
+        margin-right: 6px;
+        min-width: 24px;
+      }
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include mq(sm-down) {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      > p {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--secondary);
+        @include mq(sm-down) {
+          width: 100%;
+          flex-wrap: wrap;
+        }
+        > span {
+          margin-right: 40px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 20px;
+          color: var(--secondary_light);
+          display: flex;
+          align-items: center;
+          @include mq(sm-down) {
+            width: 50%;
+            margin: 0;
+            padding: 10px 10px 0 0;
+          }
+          svg {
+            margin-right: 8px;
+            min-width: 21%;
+          }
+        }
+        > span:last-of-type {
+          margin-right: 0;
+        }
+      }
+      > span {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--secondary);
+        @include mq(sm-down) {
+          width: 100%;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+  .user_form {
+    display: flex;
+    border-top: 1px solid #d7e4fe;
+    padding: 20px 20px 0;
+    margin: 20px -20px 0;
+    flex-direction: column;
+    @include mq(sm-down) {
+      flex-direction: column;
+    }
+    > div {
+      display: flex;
+      max-width: 360px;
+      @include mq(sm-down) {
+        max-width: 100%;
+      }
+    }
+    > div:nth-child(1) {
+      justify-content: space-between;
+      @include mq(sm-down) {
+        max-width: 100%;
+        flex-direction: column;
+        margin-bottom: 0;
+      }
+      .block {
+        max-width: 174px;
+        @include mq(sm-down) {
+          max-width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    & > div:not(:first-child) {
+      @include mq(md) {
+        margin-top: 24px;
+      }
+      &.next_block:not(.last) .block {
+        @include mq(sm-down) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .info_mail {
+      width: 100%;
+      max-width: 360px;
+      background: rgb(255, 248, 224);
+      border: 1px solid rgba(252, 184, 53, 0.4);
+      box-sizing: border-box;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--secondary_light);
+      margin: 8px 0 16px 0;
+      @include mq(sm-down) {
+        max-width: 100%;
+        margin: 0 0 16px 0;
+        padding: 10px 12px;
+      }
+    }
+    .next_block {
+      .block {
+        width: 100%;
+      }
+    }
+
+    .block {
+      @include mq(sm-down) {
+        flex-direction: column;
+        margin: 0 0 12px 0;
+        width: 100%;
+      }
+      .input-mui__input {
+        height: 48px;
+        input {
+          height: 48px;
+          padding: 0 16px;
+        }
+      }
+
+      > span {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--secondary_light);
+        margin-bottom: 8px;
+        display: flex;
+      }
+    }
+    .btn {
+      margin-top: 22px;
+      @include mq(sm-down) {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 4px;
+        @include mq(sm-down) {
+          margin-top: 16px;
+        }
+        .button-mui {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

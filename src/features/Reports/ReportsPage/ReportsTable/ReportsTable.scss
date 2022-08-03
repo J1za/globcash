@@ -1,0 +1,371 @@
+@import "../../../../../src/assets/styles/mixins";
+
+.reports_table{
+  width: 100%;
+  margin-bottom: 64px;
+  position: relative;
+
+  @include mq(xl-down) {
+    padding: 16px 0px 0;
+    margin-bottom: 32px;
+  }
+  .filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px;
+    @media only screen and (max-width: 1360px) {
+      padding: 24px 20px;
+    }
+    .left{
+      align-items: center;
+      display: flex;
+      height: 30px;
+      @media only screen and (max-width: 1360px) {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+      }
+      .title{
+        padding-right: 48px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 26px;
+        color: var(--primary);
+        @media only screen and (max-width: 1360px) {
+          padding:0;
+        }
+      }
+    }
+    .select-component{
+      min-width: auto;
+      .select__control{
+        background: var(--white);
+        border-radius: 24px;
+        border: none;
+        min-height: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        &--menu-is-open {
+          background: transparent;
+        }
+      }
+      .select__placeholder{
+        color: var(--secondary_light);
+        opacity: 1;
+        top: auto;
+        position: inherit;
+        transform: translateY(0%);
+        font-weight: 600;
+      }
+      .select__single-value{
+        color: var(--secondary_light);
+        opacity: 1;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 26px;
+        margin-left: 2px;
+        margin-right: 2px;
+        max-width: calc(100% - 8px);
+        overflow: initial;
+        position:inherit;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        box-sizing: border-box;
+      }
+      .select__value-container{
+        height: 24px;
+        padding: 2px 0 2px;
+        overflow: inherit;
+      }
+      .select__indicator{
+        padding: 0;
+        svg{
+          stroke: var(--secondary);
+          fill: var(--secondary);
+          path{
+            stroke: var(--secondary);
+          }
+        }
+      }
+      .select__menu{
+        width: 162px;
+      }
+      .select__option--is-selected{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--secondary_light);
+      }
+      .select__option{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--secondary_light);
+      }
+      .select__option--is-focused{
+        color: var(--info);
+        background: var(--white);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    .right{
+      display: flex;
+      align-items: center;
+      @include mq(xl-down) {
+       display: none;
+      }
+      >span{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: right;
+        color: var(--secondary);
+        opacity: 0.5;
+        margin-right: 24px;
+      }
+
+      .select-component{
+        min-width: auto;
+        .select__menu{
+          width: 50px;
+        }
+        .select__option--is-selected{
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          color: var(--third_light);
+        }
+        .select__option{
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          color: var(--third_light);
+        }
+        .select__option--is-focused{
+          color: var(--info);
+          background: var(--white);
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .table {
+    .row{
+      transition: 0.3s ease;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(17, 24, 39, 0.1);
+      td{
+        height: 82px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--secondary);
+        letter-spacing: 0.02em;
+      }
+    }
+    .data{
+      display: flex;
+      align-items: center;
+      svg{
+        margin-right: 8px;
+      }
+    }
+    .name{
+      display: flex;
+      align-items: center;
+      img{
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+    }
+    .text{
+      display: flex;
+      flex-direction: column;
+      span{
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        color: var(--secondary_light);
+        display: flex;
+        margin-bottom: 2px;
+      }
+      p{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.02em;
+        color: var(--secondary);
+      }
+    }
+  }
+
+  .no_items{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .title{
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+      color: var(--primary);
+      width: 100%;
+      padding: 32px 32px 32px 32px;
+      @include mq(xl-down) {
+        padding: 24px 20px;
+      }
+    }
+    span{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 12px;
+      color: var(--secondary);
+      opacity: 0.7;
+      margin-top: 14px;
+    }
+  }
+
+  .sort_btn{
+    display: flex;
+    align-items: center;
+    color: var(--third_light);
+    >div{
+      display: flex;
+      flex-direction: column;
+      margin-left: 8px;
+      svg{
+        margin: 2px 0;
+      }
+    }
+  }
+  .up{
+    .up_icon{
+      path{
+        opacity:1;
+        stroke: var(--info);
+        fill: var(--info);
+        path{
+          stroke: var(--info);
+        }
+      }
+    }
+  }
+  .down{
+    .up_down{
+      path{
+        opacity:1;
+        stroke: var(--info);
+        fill: var(--info);
+        path{
+          stroke: var(--info);
+        }
+      }
+    }
+  }
+  .mob_table{
+    display: none;
+    flex-direction: column;
+    @include mq(xl-down) {
+      display: flex;
+    }
+    .filter{
+      .right{
+        display: flex;
+      }
+    }
+    >div{
+      border-top: 1px solid rgba(53, 121, 252, 0.2);
+      padding: 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      .top{
+        display: flex;
+        margin-bottom: 8px;
+        flex-direction: column;
+        >div{
+          margin-bottom: 12px;
+          display: flex;
+          align-items: center;
+          svg, img{
+            margin-right: 8px;
+
+            display: flex;
+          }
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+      .bottom{
+        display: flex;
+        justify-content: space-between;
+        .left{
+          display: flex;
+          flex-direction: column;
+          border-right: 1px solid rgba(53, 121, 252, 0.2);
+          width: 100%;
+          span{
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            color: var(--secondary_light);
+          }
+          p{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.02em;
+            color: var(--secondary);
+          }
+        }
+        .right{
+          width: 100%;
+          align-items: flex-end;
+          display: flex;
+          flex-direction: column;
+          span{
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            margin-bottom: 12px;
+            display: flex;
+            color: var(--secondary_light);
+          }
+          p{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.02em;
+          }
+        }
+      }
+    }
+  }
+  .desc{
+    @include mq(xl-down) {
+      display: none;
+    }
+  }
+  .pagination-container{
+    padding: 20px 30px;
+    @include mq(xl-down) {
+      justify-content: center;
+      padding: 0px 30px 24px;
+    }
+  }
+}

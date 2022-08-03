@@ -1,0 +1,30 @@
+.accordion-mui {
+  .accordion-mui-item {
+    color: var(--white);
+    background-color: var(--info);
+
+    &--color-default {
+      color: var(--white);
+      background-color: var(--info);
+    }
+
+    &--color-none {
+      color: rgba(17, 24, 39, 0.7);
+      background-color: var(--white);
+    }
+
+    &--color-primary {
+      color: var(--white);
+      background-color: var(--primary);
+    }
+
+    &--color-secondary {
+      color: var(--white);
+      background-color: var(--error);
+    }
+
+    &__expand-icon {
+      color: inherit;
+    }
+  }
+}

@@ -1,0 +1,363 @@
+.stub {
+    overflow: hidden;
+    padding-left: 78px;
+    font-family: var(--circefont);
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media only screen and (max-width: 1439px) {
+        padding-left: 60px;
+    }
+    @media only screen and (max-width: 1199px) {
+        padding-left: 50px;
+    }
+    @media only screen and (max-width: 991px) {
+        padding-left: 40px;
+    }
+    @media only screen and (max-width: 767px) {
+        padding-left: 26px;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        background: #126bdc;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: center center/cover no-repeat url("../../assets/images/stub-bg.png");
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        grid-column-gap: 20px;
+    }
+    &__info {
+        flex-shrink: 0;
+        color: var(--white);
+        margin-top: 40px;
+        max-width: 620px;
+        @media only screen and (max-width: 1199px) {
+            margin-top: 30px;
+        }
+        @media only screen and (max-width: 991px) {
+            margin-top: 25px;
+        }
+        @media only screen and (max-width: 767px) {
+            margin-top: 18px;
+            flex-shrink: 1;
+            max-width: 100%;
+            margin-right: 30px;
+        }
+        h2 {
+            margin-top: 26px;
+            color: var(--white);
+            font-size: 30px;
+            line-height: 96px;
+            font-weight: 700;
+            @media only screen and (max-width: 1439px) {
+                font-size: 26px;
+                line-height: 65px;
+            }
+            @media only screen and (max-width: 1199px) {
+                font-size: 24px;
+                line-height: 50px;
+                margin-bottom: 14px;
+            }
+            @media only screen and (max-width: 991px) {
+                font-size: 20px;
+                line-height: 35px;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 18px;
+                line-height: 21px;
+                margin-top: 35px;
+            }
+        }
+        h1 {
+            font-size: 80px;
+            line-height: 84px;
+            letter-spacing: 0.48px;
+            @media only screen and (max-width: 1439px) {
+                font-size: 75px;
+                line-height: 80px;
+                letter-spacing: 0.45px;
+            }
+            @media only screen and (max-width: 1199px) {
+                font-size: 70px;
+                line-height: 75px;
+                letter-spacing: 0.42px;
+            }
+            @media only screen and (max-width: 991px) {
+                font-size: 65px;
+                line-height: 70px;
+                letter-spacing: 0.38px;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 60px;
+                line-height: 60px;
+                letter-spacing: 0.345021px;
+            }
+        }
+        &-auth{
+            display: none;
+            @media only screen and (max-width: 767px) {
+                display: block;
+                position: absolute;
+                top: 5px;
+                right: -5px;
+            }
+        }
+        &-logo{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__image {
+        position: relative;
+        max-height: 100vh;
+        right: -9.5vw;
+        //top: -7vh;
+        //align-self: flex-end;
+        width: 1000px;
+        flex-shrink: 0;
+        height: 100%;
+        @media only screen and (max-width: 1639px) {
+            top: 0;
+            right: -5vw;
+        }
+        @media only screen and (max-width: 1439px) {
+            right: -2vw;
+            top: 0;
+        }
+        @media only screen and (max-width: 1199px) {
+            right: 15vw;
+            top: 0;
+        }
+        @media only screen and (max-width: 991px) {
+            right: 25vw;
+            max-height: 90vh;
+        }
+        @media only screen and (max-width: 767px) {
+            position: absolute;
+            right: 0;
+            top: 35%;
+            max-height: 60vh;
+            height: 60vh;
+            opacity: .3;
+            z-index: -1;
+        }
+        img {
+            margin-left: auto;
+            height: 100%;
+            object-fit: contain;
+            object-position: top left;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-row-gap: 20px;
+        margin: 41px 0 54px;
+        @media only screen and (max-width: 1439px) {
+            margin: 35px 0 45px;
+        }
+        @media only screen and (max-width: 1199px) {
+            grid-row-gap: 15px;
+        }
+        @media only screen and (max-width: 991px) {
+            margin: 30px 0 40px;
+        }
+        @media only screen and (max-width: 767px) {
+            margin: 22px 0 31px;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            grid-column-gap: 17px;
+            position: relative;
+            @media only screen and (max-width: 991px) {
+                grid-column-gap: 14px;
+            }
+            &::before {
+                flex-shrink: 0;
+                position: relative;
+                content: "";
+                background: center center/cover no-repeat url(../../assets/icons/stub-check.svg);
+                width: 34px;
+                height: 34px;
+                @media only screen and (max-width: 1199px) {
+                    width: 30px;
+                    height: 30px;
+                }
+                @media only screen and (max-width: 991px) {
+                    width: 26px;
+                    height: 26px;
+                }
+                @media only screen and (max-width: 767px) {
+                    width: 23px;
+                    height: 23px;
+                }
+            }
+            span {
+                font-size: 25px;
+                line-height: 35px;
+                @media only screen and (max-width: 1439px) {
+                    font-size: 23px;
+                    line-height: 32px;
+                }
+                @media only screen and (max-width: 1199px) {
+                    font-size: 21px;
+                    line-height: 28px;
+                }
+                @media only screen and (max-width: 991px) {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+                @media only screen and (max-width: 767px) {
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+            }
+        }
+    }
+    &__video {
+        display: grid;
+        grid-row-gap: 15px;
+        @media only screen and (max-width: 767px) {
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        &-play {
+            width: 140px;
+            height: 80px;
+            background: #ffffff;
+            border-bottom: 4px solid #c4c4c4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+            span {
+                position: absolute;
+                width: 25%;
+                height: 4px;
+                bottom: -4px;
+                left: 0;
+                background-color: #ff0000;
+                transition: 0.4s linear;
+            }
+            svg {
+                transition: 0.35s linear;
+            }
+            &:hover {
+                svg {
+                    transform: scale(1.1);
+                }
+                span {
+                    width: 60%;
+                }
+            }
+        }
+        p {
+            font-size: 20px;
+            line-height: 29px;
+            font-weight: 700;
+        }
+        &-iframe {
+            max-width: 1000px;
+            width: 100%;
+            height: 562px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @media only screen and (max-width: 991px) {
+                width: 95%;
+                height: 50%;
+            }
+        }
+    }
+    &__auth {
+        margin: 50px 0;
+        display: inline-block;
+        background: #ffffff;
+        box-shadow: 0px 20px 100px rgba(0, 81, 249, 0.8);
+        border-radius: 10px;
+        padding: 18px 56px 17px 50px;
+        cursor: pointer;
+        transition: 0.3s linear;
+        @media only screen and (max-width: 1439px) {
+            margin: 45px 0;
+            padding: 18px 45px 17px 40px;
+        }
+        @media only screen and (max-width: 1199px) {
+            margin: 40px 0;
+            padding: 16px 40px 15px 35px;
+        }
+        @media only screen and (max-width: 767px) {
+            display: none;
+        }
+        &:hover {
+            opacity: 0.92;
+        }
+        p {
+            color: var(--dark_third);
+            font-weight: 500;
+            font-family: var(--robotofont);
+            font-size: 21px;
+            line-height: 20px;
+            text-transform: uppercase;
+            @media only screen and (max-width: 1439px) {
+                font-size: 20px;
+                line-height: 19px;
+            }
+            @media only screen and (max-width: 1199px) {
+                font-size: 19px;
+                line-height: 18px;
+            }
+        }
+    }
+    &__footerText {
+        position: relative;
+        margin-left: -78px;
+        padding: 15px 0;
+        padding-left: 78px;
+        background: #ffffff;
+        @media only screen and (max-width: 1439px) {
+            padding: 12px 0;
+            padding-left: 60px;
+            margin-left: -60px;
+        }
+        @media only screen and (max-width: 1199px) {
+            padding-left: 50px;
+            margin-left: -50px;
+        }
+        @media only screen and (max-width: 991px) {
+            padding-left: 40px;
+            margin-left: -40px;
+        }
+        @media only screen and (max-width: 767px) {
+            padding: 12px 35px 10px;
+        }
+        p {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+    &__copyright {
+        margin-top: 7px;
+    }
+}

@@ -1,0 +1,116 @@
+.balance_block{
+  background: #FFFFFF;
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.03), 0px 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  margin-bottom: 32px;
+  padding: 4px 0 9px;
+  @media only screen and (max-width: 768px) {
+    border-radius: 0px;
+    box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.03), 0px 4px 8px rgba(0, 0, 0, 0.07);
+    margin-bottom: 24px;
+    padding: 3px 0;
+  }
+  >div{
+    padding: 20px 32px;
+    border-bottom: 1px solid rgba(53, 121, 252, 0.2);
+    @media only screen and (max-width: 768px) {
+      padding: 18px 21px;
+    }
+    .title{
+      margin-bottom: 12px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: var(--secondary_light);
+      display: flex;
+      align-items: center;
+      p{
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        line-height: 12px;
+        svg{
+          margin:0 6px 0 12px;
+        }
+      }
+    }
+    .descriptions{
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 0.02em;
+      color: var(--secondary);
+      margin-bottom: 9px;
+    }
+    .info{
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: var(--secondary_light);
+      display: flex;
+      align-items: center;
+      p{
+        display: flex;
+        align-items: center;
+      }
+    }
+    >span{
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 13px;
+      letter-spacing: 0.02em;
+    }
+    .blue{
+      color: var(--info);
+    }
+    .green{
+      color: var(--green);
+    }
+    .red{
+      color: var(--red);
+    }
+  }
+  .inactive{
+    display: flex;
+    align-items: center;
+    >svg{
+      margin-right: 16px;
+      min-width: 62px;
+      min-height: 58px;
+      @media only screen and (max-width: 768px) {
+        margin-right: 8px;
+      }
+    }
+    >div{
+      display: flex;
+      flex-direction: column;
+      >span{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        color: var(--primary);
+      }
+      >p{
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        color: var(--secondary_light);
+
+        opacity: 0.7;
+      }
+    }
+  }
+
+  >div:last-of-type{
+    border-bottom: none;
+  }
+  ._loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110px;
+  }
+}

@@ -1,0 +1,402 @@
+@import "../../../../src/assets/styles/mixins";
+.reports_inner_page{
+    width: 100%;
+    margin: 32px 0 0;
+    position: relative;
+    padding: 0 60px;
+    @include mq(xl-down) {
+        padding: 0 16px 0;
+        margin-bottom: 24px;
+    }
+    @include mq(sm-down) {
+        padding: 0;
+        margin: 24px 0;
+    }
+}
+.block_reports_head {
+    .breadcrumbs {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+        overflow-x: auto;
+        @include mq(sm-down) {
+            width: auto;
+            padding: 0 16px;
+        }
+        svg {
+            margin: 0 6px;
+        }
+        a {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 15px;
+            color: var(--info);
+        }
+        span {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 15px;
+            color: var(--primary_light);
+        }
+        & > * {
+            white-space: nowrap;
+        }
+    }
+    .wrapper_desc{
+        background: var(--white);
+        box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.03), 0px 4px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        @include mq(sm-down) {
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+    }
+    .top{
+        padding: 40px 40px 34px;
+        display: flex;
+        flex-direction: column;
+        @include mq(sm-down) {
+            padding: 24px 20px 20px;
+
+        }
+        .data{
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 18px;
+            color: var(--primary);
+            svg{
+                margin-right: 12px;
+            }
+            span{
+                display: flex;
+                margin-left: 9px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 18px;
+                text-transform: uppercase;
+                color: var(--primary_light);
+            }
+        }
+        .name{
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: var(--secondary_light);
+            margin-bottom: 30px;
+            @include mq(sm-down) {
+                display: inline-block;
+                margin: 0 -20px;
+                padding: 0 20px 24px;
+                border-bottom: 1px solid rgba(53, 121, 252, 0.2);
+            }
+            img{
+                width: 24px;
+                height: 24px;
+                margin: 0 8px;
+                display: inline-block;
+                @include mq(sm-down) {
+                    margin: -10px 8px -7px;
+                }
+            }
+            a{
+                margin-right: 3px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                text-decoration: underline;
+                color: var(--blue);
+                @include mq(sm-down) {
+                    display: inline-block;
+                }
+            }
+
+        }
+        .coin{
+            display: flex;
+            align-items: center;
+            @include mq(sm-down) {
+               padding-top: 20px;
+            }
+            svg{
+                margin-right: 12px;
+                width: 40px;
+                height: 40px;
+                @include mq(sm-down) {
+                    margin-right: 8px;
+                }
+            }
+            >div{
+                display: flex;
+                flex-direction: column;
+                span{
+                    font-weight: 600;
+                    font-size: 26px;
+                    line-height: 28px;
+                    color: var(--secondary);
+                    @include mq(sm-down) {
+                        font-size: 18px;
+                        line-height: 18px;
+                    }
+                }
+                p{
+                    font-weight: 500;
+                    font-size: 13px;
+                    line-height: 20px;
+                    color: var(--secondary_light);
+                    @include mq(sm-down) {
+                        font-size: 13px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+    }
+    .middle{
+        padding: 12px 40px;
+        display: flex;
+        align-items: center;
+        background: #F8FAFD;
+        box-shadow: 0px -1px 0px rgba(53, 121, 252, 0.2), 0px 1px 0px rgba(53, 121, 252, 0.2);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--primary_light);
+        @include mq(sm-down) {
+            padding: 12px 20px;
+            display: inline-block;
+        }
+        svg{
+            margin-right: 4px;
+            @include mq(sm-down) {
+                margin-bottom: -4px;
+            }
+        }
+    }
+    .trading_sessions{
+        padding: 16px 32px;
+        border-bottom: 1px solid rgba(53, 121, 252, 0.2);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: rgba(7, 19, 45, 0.8);
+        @include mq(sm-down) {
+            padding: 12px 20px;
+        }
+        span{
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 18px;
+            display: flex;
+            margin-left: 3px;
+            color: var(--primary);
+        }
+    }
+}
+
+.block_inner_mini{
+    margin-bottom: 100px;
+    display: flex;
+    background: var(--white);
+    background: var(--white);
+    box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.03), 0px 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius:0 0 4px 4px ;
+    @include mq(xl-down) {
+        flex-direction: column;
+    }
+    @include mq(sm-down) {
+        margin-bottom: 32px;
+    }
+
+    >div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid rgba(53, 121, 252, 0.2);
+        padding: 24px 20px 30px 40px;
+        @include mq(xl-down) {
+            border: 1px solid rgba(53, 121, 252, 0.2);
+            border-right: none;
+        }
+        @include mq(sm-down) {
+            padding: 20px;
+        }
+        >.top{
+            @include mq(xl-down) {
+                display: flex;
+                align-items: center;
+                margin-bottom: 16px;
+                .icon{
+                    margin-right: 12px;
+                    margin-bottom: 0;
+                }
+                .title{
+                    margin-bottom: 0;
+                }
+            }
+            @include mq(sm-down) {
+                flex-direction: column;
+                align-items: flex-start;
+                .icon{
+                    margin-right: 0;
+                    margin-bottom: 12px;
+                }
+
+            }
+        }
+        >.bottom{
+            @include mq(xl-down) {
+                display: flex;
+                align-items: center;
+                .total{
+                    margin-bottom: 0;
+                    margin-right: 6px;
+                }
+
+            }
+        }
+        .icon{
+            width: 40px;
+            height: 40px;
+            margin-bottom: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include mq(sm-down) {
+                width: 32px;
+                height: 32px;
+                margin-bottom: 12px;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+        .title{
+            display: flex;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            text-transform: uppercase;
+            color: rgba(7, 19, 45, 0.8);
+        }
+        .total{
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 18px;
+            letter-spacing: 0.02em;
+            color: var(--secondary);
+            margin-bottom: 12px;
+            display: flex;
+        }
+        span{
+            p{
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    >div:last-of-type{
+        border-right: none;
+        border-right: none;
+    }
+    .green {
+        color: var(--green) !important;
+    }
+    .red {
+        color: var(--red) !important;
+    }
+    .icon_wrapper{
+        display: flex;
+        margin-bottom: 16px;
+        flex-direction: column;
+        .top{
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .title{
+            margin: 0;
+        }
+        @include mq(xl-down) {
+            flex-direction: row;
+            align-items: center;
+           .top{
+               display: flex;
+               flex-direction: row;
+               margin-bottom: 0;
+
+           }
+            .title{
+                margin:0 0 0 12px;
+            }
+        }
+        @include mq(sm-down) {
+            flex-direction: column;
+            align-items: flex-start;
+            .title{
+                margin:12px 0 0 0;
+            }
+        }
+
+        .icon{
+            margin-right: 16px;
+            margin-bottom: 0;
+        }
+        p{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 22px;
+            color: var(--primary_light);
+            padding: 0 8px;
+            background: #FFEA9E;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+
+        }
+
+    }
+    .chart_mini{
+        display: flex;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.02em;
+        color: rgba(17, 24, 39, 0.8);
+        font-weight: 400;
+        flex-direction: column;
+        >div{
+            display: flex;
+            align-items: center;
+            margin-left: 3px;
+            margin-bottom: 11px;
+        }
+        span{
+            height: 20px;
+            border-radius: 2px;
+            margin-right: 8px;
+            width: 4px;
+        }
+        p{
+            margin-left: 4px;
+            display: flex;
+            font-weight: 600;
+        }
+        >div:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+}

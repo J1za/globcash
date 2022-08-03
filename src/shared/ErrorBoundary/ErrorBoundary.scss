@@ -1,0 +1,60 @@
+.error-boundary {
+  padding: 5px;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--error);
+  }
+
+  &__details {
+    position: relative;
+  }
+
+  &__summary {
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color ease 0.3s;
+
+    &:hover {
+      color: var(--error);
+    }
+  }
+
+  &__desc {
+    position: absolute;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    &--inner {
+      overflow: auto;
+      padding-right: 5px;
+      max-height: 200px;
+      white-space: pre-wrap;
+      font-family: monospace;
+      font-size: 12px;
+      color: var(--error);
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: var(--light);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--primary);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+      }
+    }
+  }
+}

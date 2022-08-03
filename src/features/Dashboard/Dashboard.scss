@@ -1,0 +1,30 @@
+.dashboard_page{
+  display: flex;
+  align-items: flex-start;
+  @media only screen and (max-width: 1360px) {
+    flex-direction: column;
+  }
+  & > .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 72.8%;
+    @media only screen and (max-width: 1360px) {
+      width: 100%;
+    }
+  }
+  & > .wrapper_left{
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+    width: calc(27% - 24px);
+    min-width: calc(27% - 24px);
+    @media only screen and (max-width: 1360px) {
+      width: 100%;
+      margin-bottom: 30px;
+      min-width: 100%;
+
+    }
+  }
+}
+
+

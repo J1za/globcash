@@ -1,0 +1,55 @@
+.contact_block{
+  display: flex;
+  width: 100%;
+  height: 260px;
+  margin-bottom: -40px;
+  >div{
+    background: rgba(53, 121, 252, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    span{
+      text-align: center;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 26px;
+      color: var(--primary);
+      margin-bottom: 48px;
+      @media only screen and (max-width: 768px) {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 32px;
+      }
+    }
+    button{
+      width: 165px;
+      height: 42px;
+      background: var(--info);
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 14px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      border: 1px solid transparent;
+      justify-content: center;
+      color: var(--white);
+      @media only screen and (max-width: 768px) {
+        width: 174px;
+        font-size: 12px;
+        line-height: 14px;
+      }
+      &:hover{
+        background: var(--white);
+        color: var(--info);
+        border: 1px solid  var(--info);
+
+      }
+    }
+
+
+  }
+}

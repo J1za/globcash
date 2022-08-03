@@ -1,0 +1,15 @@
+import { {{constantCase name}} } from './{{camelCase name}}ActionTypes';
+
+export function someFunctions(data) {
+  return {
+    type: {{constantCase name}}.TYPE,
+    payload: {
+      client: 'default',
+      request: {
+        url: `some-url/`,
+        method: 'post',
+        data,
+      },
+    },
+  };
+}

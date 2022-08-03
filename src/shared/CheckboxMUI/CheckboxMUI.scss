@@ -1,0 +1,27 @@
+.checkbox-mui {
+  padding: 0;
+  color: var(--info);
+
+  &--checked {
+  }
+
+  &--disabled {
+  }
+
+  &--indeterminate {
+  }
+
+  &--padding {
+    padding: 8px;
+  }
+
+  &.checkbox-mui-color {
+    &--primary {
+      color: var(--primary);
+    }
+
+    &--secondary {
+      color: var(--error);
+    }
+  }
+}

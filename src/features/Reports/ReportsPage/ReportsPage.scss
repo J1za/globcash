@@ -1,0 +1,29 @@
+.reports_page {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex: 1 1;
+  .breadcrumbs{
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    @media only screen and (max-width: 768px) {
+      margin: 24px 20px;
+    }
+    svg{
+      margin: 0 6px;
+    }
+    a{
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      color: var(--info);
+    }
+    span{
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      color: var(--primary_light);
+    }
+  }
+}

@@ -1,0 +1,157 @@
+@import '../../../../src/assets/styles/mixins';
+
+.risk_page {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  @include mq(sm-down) {
+    padding: 24px 20px;
+    background: transparent;
+  }
+  >a{
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+    @include mq(sm-down) {
+      padding: 0;
+      margin-bottom: 24px;
+    }
+  }
+  .risk_content{
+    display: flex;
+    margin: 0 auto;
+    width: 768px;
+    flex-direction: column;
+    @include mq(sm-down) {
+      width: 100%;
+    }
+  }
+  .title{
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 53px;
+    @include mq(sm-down) {
+      margin-bottom: 32px;
+      font-size: 24px;
+    }
+  }
+  .info{
+    display: flex;
+    flex-direction: column;
+    p{
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 28px;
+      color: var(--secondary);
+      @include mq(sm-down) {
+        margin-bottom: 12px;
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+    ul{
+      padding-left: 20px;
+      margin-bottom: 16px;
+      li{
+        padding-left: 16px;
+        list-style: auto;
+        font-size: 16px;
+        line-height: 28px;
+        color: var(--secondary);
+        padding-bottom: 16px;
+        @include mq(sm-down) {
+          font-size: 15px;
+          line-height: 20px;
+          padding-left: 12px;
+        }
+      }
+    }
+    span{
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 28px;
+      color: var(--secondary);
+      padding: 32px 0 40px;
+      @include mq(sm-down) {
+        padding: 24px 0;
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+  .descriptions{
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 30px;
+    @include mq(sm-down) {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 24px;
+    }
+  }
+  .name{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    @include mq(sm-down) {
+      margin-bottom: 24px;
+    }
+    span{
+      border-radius: 8px;
+      width: 24px;
+      height: 24px;
+      @include mq(sm-down) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    p{
+      margin-left: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 28px;
+      color: var(--secondary);
+      @include mq(sm-down) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+  .risk_sources{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    @include mq(sm-down) {
+      margin-bottom: 12px;
+    }
+    svg{
+      margin-right: 16px;
+      min-width: 24px;
+      @include mq(sm-down) {
+        margin-right: 12px;
+        min-width: 20px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    div{
+      font-size: 16px;
+      line-height: 28px;
+      @include mq(sm-down) {
+        font-size: 15px;
+        line-height: 20px;
+      }
+      color: var(--secondary);
+      span{
+        font-weight: 600;
+        margin-right: 3px;
+      }
+    }
+  }
+
+}

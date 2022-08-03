@@ -1,0 +1,301 @@
+@import "../../../../src/assets/styles/mixins";
+
+.top_news_block{
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+    @include mq(sm-down) {
+      flex-wrap: wrap;
+      padding: 30px 20px 24px;
+    }
+    svg {
+      margin: 0 6px;
+    }
+    a {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      color: var(--info);
+    }
+    span {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 15px;
+      color: var(--primary_light);
+    }
+  }
+  .wrapper{
+    display: flex;
+    margin-bottom: 56px;
+    @include mq(xl-down) {
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    @include mq(sm-down) {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+    >div{
+      cursor: pointer;
+      overflow: hidden;
+      &:hover{
+        img{
+          transform: scale(1.03);
+        }
+      }
+      img{
+        transition: all ease 0.3s;
+        border-radius: 8px;
+        @include mq(xl-down) {
+          max-height: 400px;
+        }
+      }
+    }
+    >div:nth-child(1){
+      width: 50%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      &:hover{
+        img{
+          transform: translateY(-50%) scale(1.03);
+          @include mq(xl-down) {
+            transform: translateY(0%) scale(1.03);
+          }
+        }
+      }
+      @include mq(xl-down) {
+        width: 100%;
+        display: flex;
+        margin-bottom: 20px;
+        flex-direction: column;
+      }
+      @include mq(sm-down) {
+        width: 100%;
+        padding: 0 20px 24px;
+        margin: 0;
+        border-bottom: 1px solid rgba(53, 121, 252, 0.12);
+      }
+      >span{
+        position: absolute;
+        top: 28px;
+        left: 28px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        >p{
+          margin:0 10px 10px 0;
+          background: var(--green);
+          border-radius: 5px;
+          text-transform: uppercase;
+          padding: 3px 12px;
+          color: var(--white);
+        }
+        @include mq(sm-down) {
+          display: none;
+        }
+      }
+      >img{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        min-height: 100%;
+        min-width: 100%;
+        background-size: 100% 100%;
+        object-fit: cover;
+        height: 100%;
+        transform: translateY(-50%);
+        @include mq(xl-down) {
+          position: inherit;
+          min-height: auto;
+          top: auto;
+          left: auto;
+          transform: translateY(0%);
+
+        }
+      }
+      >div{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+        background: rgba(14, 24, 49, 0.64);
+        >span{
+          display: none;
+        }
+        @include mq(xl-down) {
+          position: inherit;
+          background: var(--white);
+        }
+        @include mq(sm-down) {
+          background: transparent;
+        }
+        >p{
+          color: var(--white);
+          max-width: 70%;
+          @include mq(xl-down) {
+            color: var(--secondary);
+            max-width: 100%;
+          }
+        }
+        >div{
+          span{
+            color: var(--white);
+            @include mq(xl-down) {
+              color: var(--secondary);
+            }
+          }
+          p{
+            color: var(--white);
+            opacity: 0.8;
+            @include mq(xl-down) {
+              opacity: 1;
+              color: var(--secondary_light);
+            }
+          }
+        }
+      }
+    }
+    >div:nth-child(2){
+      border-radius: 8px;
+      width: calc(25% - 20px);
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      >span{
+        display: none;
+      }
+      @include mq(xl-down) {
+        width: calc(50% - 10px);
+        margin: 0 20px 0 0;
+      }
+      @include mq(sm-down) {
+        width: 100%;
+        margin: 0;
+        padding: 20px 20px 24px;
+        border-bottom: 1px solid rgba(53, 121, 252, 0.12);
+      }
+      >img{
+        object-fit: cover;
+        width: 100%;
+        background-size: 100% 100%;
+        height: auto;
+        max-height: 65%;
+        min-height: 65%;
+      }
+      >div{
+        height: 100%;
+      }
+    }
+    >div:nth-child(3){
+      border-radius: 8px;
+      width: calc(25% - 20px);
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      >span{
+        display: none;
+      }
+      @include mq(xl-down) {
+        width: calc(50% - 10px);
+        margin: 0;
+      }
+      @include mq(sm-down) {
+        width: 100%;
+        margin: 0;
+        padding: 20px 20px 24px;
+      }
+      >img{
+        object-fit: cover;
+        width: 100%;
+        background-size: 100% 100%;
+        height: auto;
+        max-height: 65%;
+        min-height: 65%;
+      }
+      >div{
+        height: 100%;
+      }
+    }
+    .info{
+      display: flex;
+      padding: 16px;
+      flex-direction: column;
+      background: var(--white);
+      @include mq(xl-down) {
+        padding: 10px;
+      }
+      @include mq(sm-down) {
+        padding: 0;
+        height: auto;
+        background: transparent;
+      }
+      >span{
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        color: var(--blue);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        >p{
+          margin-right: 10px;
+        }
+        @include mq(xl-down) {
+          font-size: 11px;
+        }
+        @include mq(sm-down) {
+          display: none;
+        }
+      }
+      >P{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--primary);
+        padding: 4px 0 10px;
+        @include mq(xl-down) {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        @include mq(sm-down) {
+          padding: 20px 0 4px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      >div{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        >div{
+          display: none;
+          font-size: 12px;
+          line-height: 20px;
+          color: var(--blue);
+          margin: 0 8px 0 0;
+          @include mq(sm-down) {
+            display: flex;
+          }
+        }
+        span{
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 24px;
+          color: var(--secondary);
+          margin-right: 8px;
+        }
+        p{
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 24px;
+          color: var(--secondary_light);
+        }
+      }
+    }
+
+  }
+}

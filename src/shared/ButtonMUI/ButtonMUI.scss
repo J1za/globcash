@@ -1,0 +1,130 @@
+.button-mui {
+  padding: 6px 16px;
+  min-width: 148px;
+  height: 48px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: normal;
+  border-radius: 4px;
+  box-shadow: none;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:disabled {
+  }
+
+  // variant='contained'
+  &--contained {
+    color: var(--white);
+    background-color: var(--info);
+
+    &:hover {
+      background-color: darken(#3796f6, 10%);
+    }
+
+    &:disabled {
+      color: var(--white);
+      background-color: var(--info);
+      opacity: .5;
+    }
+
+    &-primary {
+      background-color: var(--primary);
+
+      &:hover {
+        background-color: darken(#204569, 10%);
+      }
+    }
+
+    &-secondary {
+      border: 1px solid var(--error);
+      color: var(--error);
+      background-color:var(--white);
+      &:hover {
+        border: 1px solid var(--error);
+        color: var(--error);
+        background-color:var(--white);
+      }
+    }
+  }
+
+  // variant='outlined'
+  &--outlined {
+    color: var(--info);
+    border-color: var(--info);
+
+    &:hover {
+      background-color: lighten(#3796f6, 35%);
+    }
+
+    &-primary {
+      color: var(--primary);
+      border-color: var(--primary);
+
+      &:hover {
+        background-color: lighten(#204569, 60%);
+      }
+    }
+
+    &-secondary {
+      color: var(--error);
+      border-color: var(--error);
+
+      &:hover {
+        background-color: lighten(#e44b4b, 35%);
+      }
+    }
+  }
+
+  // variant='text'
+  &--text {
+    color: var(--info);
+
+    &:hover {
+      background-color: lighten(#3796f6, 35%);
+    }
+
+    &-primary {
+      color: var(--primary);
+
+      &:hover {
+        background-color: lighten(#204569, 60%);
+      }
+    }
+
+    &-secondary {
+      color: var(--error);
+
+      &:hover {
+        background-color: lighten(#e44b4b, 35%);
+      }
+    }
+  }
+
+  // size='small'
+  &--small {
+    min-width: 105px;
+    height: 35px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  // size='large'
+  &--large {
+    min-width: 168px;
+    height: 56px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  // startIcon & endIcon max size
+  &__start-icon svg,
+  &__end-icon svg {
+    max-width: 20px;
+    max-height: 20px;
+  }
+}

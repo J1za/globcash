@@ -1,0 +1,171 @@
+@import "src/assets/styles/mixins";
+
+.dao-globix {
+  padding: 48px 20px 81px;
+  min-height: 766px;
+  background-image: url("../../assets/images/dao-bg-mob.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+
+  @include mq(md) {
+    background-image: url("../../assets/images/dao-bg.svg");
+  }
+
+  & + .footer {
+    margin-top: 0;
+  }
+
+  @include mq(lg) {
+    padding-top: 160px;
+    min-height: 978px;
+  }
+
+  &__title {
+    margin-bottom: 37px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 496px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--secondary);
+
+    @include mq(md) {
+      margin-bottom: 45px;
+      font-size: 32px;
+      line-height: 44px;
+    }
+
+    span {
+      color: var(--info);
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--white);
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      min-width: 245px;
+      min-height: 54px;
+      background-image: url("../../assets/images/blue-bg.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    @include mq(md) {
+      font-size: 15px;
+
+      &:before {
+        min-width: 313px;
+        min-height: 63px;
+      }
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+    margin-top: 57px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1142px;
+
+    @include mq(md) {
+      position: relative;
+      display: block;
+      margin-top: 111px;
+    }
+  }
+
+  .dao-globix-card {
+    padding: 20px;
+    min-height: 99px;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.05);
+
+    @include mq(md) {
+      position: absolute;
+      padding: 24px;
+      min-height: 131px;
+
+      &:first-child {
+        top: 0;
+        left: 5%;
+        max-width: 270px;
+      }
+
+      &:nth-child(2) {
+        top: 179px;
+        left: 21%;
+        max-width: 242px;
+      }
+
+      &:nth-child(3) {
+        top: 10px;
+        right: 16%;
+        padding-right: 36px;
+        max-width: 241px;
+        min-height: 113px;
+      }
+
+      &:nth-child(4) {
+        top: 140px;
+        right: 4%;
+        max-width: 252px;
+      }
+    }
+
+    @include mq(lg) {
+      &:first-child {
+        left: 0;
+      }
+
+      &:nth-child(3) {
+        right: 31%;
+      }
+
+      &:nth-child(4) {
+        top: 90px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: bold;
+      color: var(--black);
+
+      @include mq(md) {
+        font-size: 32px;
+        line-height: 39px;
+      }
+    }
+
+    &__desc {
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 500;
+      color: var(--secondary);
+
+      @include mq(md) {
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+  }
+}

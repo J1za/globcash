@@ -1,0 +1,47 @@
+@import '../../../../../../../src/assets/styles/mixins';
+
+.contact-modal {
+    display: flex;
+    flex-direction: column;
+    & > h2 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 26px;
+        color: #141d33;
+        margin-bottom: 12px;
+    }
+    & > p {
+        font-weight: 500;
+        font-size: 14px;
+        color: #111827;
+        opacity: .9;
+        margin-bottom: 40px;
+    }
+    & > .block {
+        margin-bottom: 24px;
+        & > span {
+            font-weight: 500;
+            font-size: 12px;
+            color: #111827;
+            opacity: .7;
+            margin-bottom: 8px;
+        }
+        textarea {
+            padding: 18.5px 14px;
+        }
+    }
+    & > .btn {
+        margin-top: 10px;
+        justify-content: flex-end;
+        display: flex;
+        & > button {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+            @include mq(sm-down) {
+            min-width: unset;
+            width: calc(50% - 10px);
+            }
+        }
+    }
+}

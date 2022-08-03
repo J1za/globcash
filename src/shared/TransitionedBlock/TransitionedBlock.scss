@@ -1,0 +1,26 @@
+.block-animation-enter {
+  opacity: 0.01;
+}
+
+.block-animation-enter.block-animation-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.block-animation-leave {
+  opacity: 1;
+}
+
+.block-animation-leave.block-animation-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.block-animation-appear {
+  opacity: 0.01;
+}
+
+.block-animation-appear.block-animation-appear-active {
+  opacity: 1;
+  transition: all 1s ease;
+}

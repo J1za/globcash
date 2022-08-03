@@ -1,0 +1,35 @@
+@import "../../../src/assets/styles/mixins";
+
+.news_page_wrapper{
+  padding: 0 60px;
+  @include mq(xl-down) {
+    padding: 0 32px;
+  }
+  @include mq(sm-down) {
+    padding: 0;
+  }
+  .news_block_width{
+    display: flex;
+    align-items: flex-start;
+    @include mq(xl-down) {
+      flex-direction: column-reverse;
+    }
+    >div:first-of-type{
+      width: 100%;
+      margin-right: 24px;
+      @include mq(xl-down) {
+        //margin-right: 0;
+        width: 100%;
+      }
+    }
+    >div:last-of-type{
+      min-width: 420px;
+      width: 420px;
+      @include mq(xl-down) {
+        min-width: auto;
+        width: 100%;
+
+      }
+    }
+  }
+}

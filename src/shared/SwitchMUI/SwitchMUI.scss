@@ -1,0 +1,60 @@
+.switch-mui {
+
+  &--edge-start {
+
+  }
+
+  &--edge-end {
+
+  }
+
+  &--small {
+
+  }
+
+  &__base {
+    &--primary {
+      &.switch-mui__base--checked {
+        color: var(--primary);
+
+        & + .switch-mui__track {
+          background-color: var(--primary);
+        }
+      }
+    }
+
+    &--secondary {
+      &.switch-mui__base--checked {
+        color: var(--error);
+
+        & + .switch-mui__track {
+          background-color: var(--error);
+        }
+      }
+    }
+
+    &--checked {
+      color: var(--info);
+
+      & + .switch-mui__track {
+        background-color: var(--info);
+      }
+    }
+
+    &--disabled {
+
+    }
+  }
+
+  &__input {
+
+  }
+
+  &__thumb {
+
+  }
+
+  &__track {
+
+  }
+}

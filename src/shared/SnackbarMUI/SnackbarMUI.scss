@@ -1,0 +1,13 @@
+.snackbar-mui {
+  .alert-mui {
+    font-family: inherit;
+
+    &.MuiAlert-filledError {
+      background-color: var(--error);
+    }
+
+    .MuiAlert-message {
+      font-family: inherit;
+    }
+  }
+}

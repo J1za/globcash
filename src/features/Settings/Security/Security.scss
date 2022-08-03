@@ -1,0 +1,205 @@
+@import '../../../../src/assets/styles/mixins';
+
+.security_block {
+  max-width: 768px;
+  margin: 0 auto 32px;
+  padding: 32px;
+  @include mq(sm-down) {
+    width: auto;
+    padding: 24px 20px;
+    margin: 0 auto 24px;
+  }
+  .title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--primary);
+    margin-bottom: 28px;
+    flex-direction: column;
+    display: flex;
+    @include mq(sm-down) {
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 24px;
+    }
+  }
+  .block {
+    border: 1px solid rgba(53, 121, 252, 0.2);
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &.start {
+    }
+    @include mq(sm-down) {
+      position: relative;
+      padding: 20px 16px;
+    }
+    .left {
+      width: 70%;
+      display: flex;
+      align-items: flex-start;
+      @include mq(sm-down) {
+        flex-direction: column;
+        width: 100%;
+      }
+      svg {
+        margin-right: 16px;
+        min-width: 24px;
+        @include mq(sm-down) {
+          margin: 0 0 24px;
+        }
+      }
+      > div {
+        display: flex;
+        flex-direction: column;
+        span {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 20px;
+          color: var(--secondary);
+          margin-bottom: 6px;
+        }
+        p {
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 18px;
+          color: var(--secondary_light);
+          @include mq(sm-down) {
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+      @include mq(sm-down) {
+        position: absolute;
+        right: 16px;
+        top: 20px;
+      }
+      .pulse {
+        color: var(--info);
+      }
+      .switch-mui {
+        width: 40px;
+        padding: 0 !important;
+        height: 24px;
+        .MuiSwitch-track {
+          border-radius: 15px;
+          background: #a0a4ab;
+          opacity: 1;
+        }
+        .MuiIconButton-label {
+          height: 24px;
+        }
+        .switch-mui__base {
+          padding: 0;
+          width: 24px;
+          height: 24px;
+        }
+        .PrivateSwitchBase-root-1 {
+          padding: 0;
+          width: 24px;
+          height: 24px;
+        }
+        .switch-mui {
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
+          &__base--checked {
+            transform: translateX(16px);
+            color: var(--white) !important;
+            background: var(--info) !important;
+          }
+        }
+        .MuiSwitch-switchBase {
+          color: var(--white) !important;
+        }
+
+        .MuiIconButton-root {
+          background: #a0a4ab;
+        }
+      }
+      .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+        background: #3579fc !important;
+      }
+    }
+
+    .status {
+      padding-top: 18px;
+      margin-top: 26px;
+      border-top: 1px solid rgba(53, 121, 252, 0.1);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include mq(sm-down) {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+      > span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--secondary_light);
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 8px;
+        }
+      }
+      > p {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--secondary);
+        @include mq(sm-down) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        button {
+          display: flex;
+          align-items: center;
+          margin-left: 16px;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 20px;
+          color: var(--info);
+          @include mq(sm-down) {
+            margin: 8px 0 16px 0;
+          }
+        }
+      }
+    }
+  }
+  .block:last-of-type {
+    margin-bottom: 0;
+  }
+  .active {
+    background: #f8fafd;
+    border: 1px solid rgba(53, 121, 252, 0.4);
+  }
+  .password-circles {
+    color: rgb(17, 24, 39) !important;
+    margin-bottom: 12px;
+  }
+  .password-txt {
+    margin-bottom: 8px;
+  }
+  .password-container {
+    border-bottom: 1px solid rgba(53, 121, 252, 0.1);
+    align-items: flex-start;
+    display: flex;
+    width: 100%;
+  }
+}

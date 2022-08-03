@@ -1,0 +1,307 @@
+@import 'reset';
+@import 'vars';
+@import 'sassFunctions';
+@import 'mixins';
+@import 'custom';
+@import '../fonts/Inter/stylesheet';
+@import '../fonts/Gilroy/stylesheet';
+@import '../fonts/Montserrat/stylesheet';
+@import '../fonts/Circe/stylesheet';
+@import '../fonts/Roboto/stylesheet';
+//@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic-ext');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--primary);
+  background: var(--bg);
+  @include scrollbar(15px, var(--blue), var(--light), 5px, 2px);
+}
+
+a {
+  color: var(--info);
+}
+
+.root {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+.page {
+  flex: 1;
+  padding: 40px 60px 80px;
+  @media only screen and (max-width: 1360px) {
+    padding: 24px 16px 58px;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: var(--container);
+  width: 100%;
+}
+
+.card-wrap {
+  background-color: var(--white);
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.03), 0px 4px 8px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+  @media only screen and (max-width: 768px) {
+    border-radius: 0;
+  }
+}
+
+.text_right {
+  text-align: right;
+}
+.text_center {
+  text-align: center;
+}
+
+h1,
+.h1 {
+  font-size: 32px;
+  line-height: 41px;
+}
+
+h2,
+.h2,
+h3,
+.h3 {
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--secondary);
+}
+
+h3,
+.h3 {
+  font-size: 18px;
+}
+
+.backlink {
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--info);
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+}
+
+// Table
+.table {
+  tr {
+    td:first-of-type {
+      padding-left: 29px;
+    }
+    td:last-of-type {
+      padding-right: 29px;
+    }
+    th:first-of-type {
+      padding-left: 29px;
+    }
+    th:last-of-type {
+      padding-right: 29px;
+    }
+  }
+  thead {
+    tr {
+      border-bottom: 1px solid var(--light);
+      box-shadow: 0px -1px 0px rgba(53, 121, 252, 0.1), 0px 1px 0px rgba(53, 121, 252, 0.1);
+    }
+  }
+
+  th {
+    padding: 8px 10px;
+    height: 42px;
+    font-weight: 500;
+    background: var(--bg);
+    color: var(--third_light);
+    font-size: 12px;
+    line-height: 26px;
+  }
+
+  td {
+    padding: 0px 10px;
+    height: 46px;
+    vertical-align: inherit;
+    color: var(--secondary);
+  }
+}
+
+.table-inner {
+  display: flex;
+  gap: 16px;
+
+  &--right {
+    justify-content: right;
+    align-items: center;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+}
+
+// Helper classes
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--column {
+    flex-direction: column;
+  }
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.gap-25 {
+  gap: 25px;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.good {
+  color: var(--success);
+}
+
+.alert {
+  color: var(--error);
+}
+
+.warning {
+  color: var(--warning);
+}
+
+.bold {
+  font-weight: 700;
+}
+.semi_bold {
+  font-weight: 600;
+}
+
+.good-hover {
+  transition: opacity 0.3s;
+  a {
+    margin: 0;
+    height: 24px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.7;
+  }
+}
+
+.card-hover {
+  cursor: pointer;
+  transition: margin-top ease 0.3s, margin-bottom ease 0.3s;
+
+  &:hover {
+    margin-top: -3px;
+    margin-bottom: 3px;
+  }
+}
+
+.no-select {
+  user-select: none;
+}
+
+// Animations
+.pulse {
+  span {
+    cursor: pointer;
+  }
+  &:hover {
+    animation: pulse 2s infinite;
+  }
+}
+
+@keyframes pulse {
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+
+// React Toastify
+.Toastify__toast {
+  font-family: inherit;
+
+  &--error {
+    background-color: var(--error);
+  }
+
+  &--success {
+    background-color: var(--success);
+  }
+}
+
+//loader
+.loading {
+  display: flex;
+  flex: 1 1 100%;
+  margin-top: 0;
+  & > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+div.no_data {
+  display: flex;
+  height: 142px;
+  padding: 15px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  & > span {
+    margin: 15px 0 0;
+    text-transform: unset;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
